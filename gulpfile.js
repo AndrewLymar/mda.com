@@ -29,8 +29,7 @@ gulp.task('sass', function () {
 gulp.task('css', function () {
     return gulp.src([
         'app/styles/css/reset.css',
-        'app/styles/css/main.css',
-        'app/styles/css/jquery.background-video.css'
+        'app/styles/css/main.css'
         ])
         .pipe(autoprefixer(['last 3 versions']))
         .pipe(cleanCSS({
@@ -43,7 +42,7 @@ gulp.task('css', function () {
 gulp.task('js', function () {
     return gulp.src([
         'app/js/jquery.min.js',
-        'app/js/jquery.background-video.js',
+        'app/js/mobileMenu.js',
 		'app/js/common.js'
 		])
         .pipe(concat('scripts.min.js'))

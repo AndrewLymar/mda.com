@@ -43,6 +43,8 @@ textarea {
 body {
   line-height: 1.5;
 }
+@charset "UTF-8";
+
 @font-face {
   font-family: Test;
   font-weight: 400;
@@ -1189,11 +1191,34 @@ body {
   font-family: sans-serif;
 }
 
+.img-container {
+  height: auto;
+}
+
+.img-container img {
+  width: 100%;
+}
+
+.menu-grid {
+  display: grid;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-template-areas: "logo menu-left menu-right";
+  grid-auto-columns: auto 1fr 1fr;
+}
+
+.menu-grid.mobile {
+  height: 100vh;
+}
+
 .logo {
+  margin-right: 30px;
   font-family: Monoton,cursive;
   font-size: 48px;
   line-height: 1.2em;
-  margin-right: 30px;
+  grid-area: logo;
+  cursor: pointer;
 }
 
 .logo--first-letter {
@@ -1208,20 +1233,65 @@ body {
   color: #9f3;
 }
 
+.menu-icon {
+  display: none;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  top: 18px;
+  right: 10%;
+  grid-area: menu-icon;
+}
+
 .menu {
-  padding: 15px;
+  position: fixed;
+  width: 100%;
+  padding: 5px;
   background-image: -webkit-gradient(linear,left top,right top,from(#00c1cf),color-stop(50%,#b97ebb),to(#00c1cf));
   background-image: -o-linear-gradient(left,#00c1cf 0,#b97ebb 50%,#00c1cf 100%);
   background-image: linear-gradient(to right,#00c1cf 0,#b97ebb 50%,#00c1cf 100%);
+  z-index: 99999;
+}
+
+.menu__left {
+  grid-area: menu-left;
+  justify-self: start;
+}
+
+@media only screen and (max-width:768px) {
+  .menu-grid {
+    grid-template-areas: "logo . ." "menu-left menu-left menu-left" "menu-right menu-right menu-right ";
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .menu__left {
+    justify-self: center;
+  }
+}
+
+.menu__right {
+  grid-area: menu-right;
+  justify-self: end;
 }
 
 .menu__list {
   margin-left: 25px;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
 }
 
 .menu__item {
   margin-right: 25px;
   color: #fff;
+}
+
+.menu__item:last-child {
+  margin-right: 0;
 }
 
 .menu__link {
@@ -1235,151 +1305,137 @@ body {
   transition: .4s;
 }
 
+@media only screen and (max-width:768px) {
+  .menu__right {
+    margin-bottom: 30px;
+    justify-self: center;
+  }
+
+  .menu__list {
+    display: none;
+    margin-top: 30px;
+    margin-left: 0;
+  }
+
+  .menu__item {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .menu__link {
+    font-size: 16px;
+  }
+}
+
 .menu__link:hover {
   color: #9f3;
 }
 
 .banner__video-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  height: 100vh;
 }
 
 .banner__video-wrapper .video {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
-.overlay {
+.banner__video-wrapper .overlay {
   position: absolute;
   z-index: 1;
 }
 
-.overlay p {
+.banner__video-wrapper .overlay p {
   font-size: 32px;
   color: #9f3;
 }
 
-.about {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.about-text {
+.banner__text {
   font-size: 48px;
   color: #fff;
 }
 
-.about-text span {
+.banner__word {
   margin-right: 55px;
+  font-family: Monoton,cursive;
   -webkit-writing-mode: vertical-rl;
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
   -webkit-text-orientation: upright;
   text-orientation: upright;
   color: #fff;
-  font-family: Monoton,cursive;
 }
 
-.about-text span:first-letter {
+.banner__word:first-letter {
   font-size: 58px;
   color: #f398a9;
 }
 
-.about-text .first-word:first-letter {
+@media only screen and (max-width:992px) {
+  .banner__text {
+    font-size: 40px;
+  }
+
+  .banner__word:first-letter {
+    font-size: 48px;
+  }
+}
+
+.banner__word:last-child {
+  margin-right: 0;
+}
+
+.banner__word--first-word:first-letter {
   color: #ff0;
 }
 
-.about-text .second-word:first-letter {
+.banner__word--second-word:first-letter {
   color: #b87ebb;
 }
 
-.about-text .last-word:first-letter {
+.banner__word--last-word:first-letter {
   color: #9f3;
 }
-.jquery-background-video-wrapper {
+
+section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.about {
+  background-image: -webkit-gradient(linear,left bottom,left top,from(#fbc2eb),to(#a6c1ee));
+  background-image: -o-linear-gradient(bottom,#fbc2eb 0,#a6c1ee 100%);
+  background-image: linear-gradient(to top,#fbc2eb 0,#a6c1ee 100%);
+  font-family: Montserrat,sans-serif;
+  font-size: 22px;
+}
+
+.about__title {
+  margin-bottom: 50px;
+  color: #b87ebb;
+}
+
+.about__text {
+  font-size: 18px;
+  line-height: 1.7em;
+  color: #310b49;
+}
+
+.thumb-wrap {
   position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
   overflow: hidden;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
-.jquery-background-video {
+.thumb-wrap iframe {
   position: absolute;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  top: 50%;
-  left: 50%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-}
-
-.js .jquery-background-video {
-  opacity: 0;
-  -webkit-transition: opacity .3s linear;
-  -o-transition: opacity .3s linear;
-  transition: opacity .3s linear;
-}
-
-.js .jquery-background-video.is-visible {
-  opacity: 1;
-}
-
-.jquery-background-video-pauseplay {
-  position: absolute;
-  background: 0 0!important;
-  border: none!important;
-  -webkit-box-shadow: none!important;
-  box-shadow: none!important;
-  width: 20px;
-  height: 20px;
-  top: 15px;
-  right: 15px;
-  padding: 0!important;
-  cursor: pointer;
-  outline: 0!important;
-}
-
-.jquery-background-video-pauseplay span {
-  display: none;
-}
-
-.jquery-background-video-pauseplay:after,
-.jquery-background-video-pauseplay:before {
-  content: "";
-  position: absolute;
-  left: 0;
   top: 0;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s;
-}
-
-.jquery-background-video-pauseplay.play:before {
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 15px solid #fff;
-}
-
-.jquery-background-video-pauseplay.pause:after,
-.jquery-background-video-pauseplay.pause:before {
-  border-top: 10px solid #fff;
-  border-bottom: 10px solid #fff;
-  border-left: 5px solid #fff;
-}
-
-.jquery-background-video-pauseplay.pause:after {
-  left: 10px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  border-width: 0;
+  outline-width: 0;
 }

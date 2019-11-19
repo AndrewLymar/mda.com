@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Test";
   font-weight: normal;
@@ -514,11 +515,30 @@
 body {
   font-family: sans-serif; }
 
+.img-container {
+  height: auto; }
+  .img-container img {
+    width: 100%; }
+
+.menu-grid {
+  display: grid;
+  align-items: center;
+  grid-template-areas: "logo menu-left menu-right";
+  grid-auto-columns: auto 1fr 1fr; }
+  @media only screen and (max-width: 768px) {
+    .menu-grid {
+      grid-template-areas: "logo . ." "menu-left menu-left menu-left" "menu-right menu-right menu-right "; } }
+
+.menu-grid.mobile {
+  height: 100vh; }
+
 .logo {
+  margin-right: 30px;
   font-family: 'Monoton', cursive;
   font-size: 48px;
   line-height: 1.2em;
-  margin-right: 30px; }
+  grid-area: logo;
+  cursor: pointer; }
   .logo--first-letter {
     color: #FFFF00; }
   .logo--second-letter {
@@ -526,14 +546,55 @@ body {
   .logo--last-letter {
     color: #99FF33; }
 
+.menu-icon {
+  display: none;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  top: 18px;
+  right: 10%;
+  grid-area: menu-icon; }
+  @media only screen and (max-width: 768px) {
+    .menu-icon {
+      display: block; } }
+
 .menu {
-  padding: 15px;
-  background-image: linear-gradient(to right, #00c1cf 0%, #b97ebb 50%, #00c1cf 100%); }
+  position: fixed;
+  width: 100%;
+  padding: 5px;
+  background-image: linear-gradient(to right, #00c1cf 0%, #b97ebb 50%, #00c1cf 100%);
+  z-index: 99999; }
+  .menu__left {
+    grid-area: menu-left;
+    justify-self: start; }
+    @media only screen and (max-width: 768px) {
+      .menu__left {
+        justify-self: center; } }
+  .menu__right {
+    grid-area: menu-right;
+    justify-self: end; }
+    @media only screen and (max-width: 768px) {
+      .menu__right {
+        margin-bottom: 30px;
+        justify-self: center; } }
   .menu__list {
-    margin-left: 25px; }
+    margin-left: 25px;
+    transition: all 0.4s ease; }
+    @media only screen and (max-width: 768px) {
+      .menu__list {
+        display: none;
+        margin-top: 30px;
+        margin-left: 0px; } }
   .menu__item {
     margin-right: 25px;
     color: #fff; }
+    @media only screen and (max-width: 768px) {
+      .menu__item {
+        margin-right: 0px;
+        margin-bottom: 20px; } }
+    .menu__item:last-child {
+      margin-right: 0; }
   .menu__link {
     font-family: 'Nunito', sans-serif;
     font-size: 14px;
@@ -541,43 +602,84 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     transition: all 0.4s ease; }
+    @media only screen and (max-width: 768px) {
+      .menu__link {
+        font-size: 16px; } }
     .menu__link:hover {
       color: #99FF33; }
 
 .banner__video-wrapper {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center; }
+  height: 100vh; }
   .banner__video-wrapper .video {
-    width: 100%; }
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  .banner__video-wrapper .overlay {
+    position: absolute;
+    z-index: 1; }
+    .banner__video-wrapper .overlay p {
+      font-size: 32px;
+      color: #9f3; }
 
-.overlay {
-  position: absolute;
-  z-index: 1; }
-  .overlay p {
-    font-size: 32px;
-    color: #9f3; }
-
-.about {
-  padding-top: 50px;
-  padding-bottom: 50px; }
-
-.about-text {
+.banner__text {
   font-size: 48px;
   color: #fff; }
-  .about-text span {
-    margin-right: 55px;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    color: #fff;
-    font-family: 'Monoton', cursive; }
-    .about-text span:first-letter {
-      font-size: 58px;
-      color: #F398A9; }
-  .about-text .first-word:first-letter {
-    color: #FFFF00; }
-  .about-text .second-word:first-letter {
+  @media only screen and (max-width: 992px) {
+    .banner__text {
+      font-size: 40px; } }
+
+.banner__word {
+  margin-right: 55px;
+  font-family: 'Monoton', cursive;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  color: #fff; }
+  .banner__word:first-letter {
+    font-size: 58px;
+    color: #F398A9; }
+    @media only screen and (max-width: 992px) {
+      .banner__word:first-letter {
+        font-size: 48px; } }
+  .banner__word:last-child {
+    margin-right: 0; }
+
+.banner__word--first-word:first-letter {
+  color: #FFFF00; }
+
+.banner__word--second-word:first-letter {
+  color: #B87EBB; }
+
+.banner__word--last-word:first-letter {
+  color: #99FF33; }
+
+section {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+
+.about {
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px; }
+  .about__title {
+    margin-bottom: 50px;
     color: #B87EBB; }
-  .about-text .last-word:first-letter {
-    color: #99FF33; }
+  .about__text {
+    font-size: 18px;
+    line-height: 1.7em;
+    color: #310b49; }
+
+.thumb-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+  height: 0;
+  overflow: hidden; }
+
+.thumb-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  border-width: 0;
+  outline-width: 0; }
