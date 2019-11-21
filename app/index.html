@@ -33,15 +33,16 @@
         -->
         <nav class="menu gradien">
             <div class="container menu-grid">
-
-                <div class="logo"><span class="logo--first-letter">M</span><span class="logo--second-letter">D</span><span class="logo--last-letter">A</span></div>
+                <!--
+                <div class="logo"><span class="logo--first-letter">M</span><span class="logo--second-letter">A</span><span class="logo--last-letter">D</span><br><span class="logo--sub">Vision</span></div>
+                -->
+                <div class="logo flex-col">MAD<span class="logo--sub">Vision</span>
+                </div>
                 <ul class="menu__left menu__list flex-row flex-col-md ai-center">
                     <li class="menu__item"><a class="menu__link" href="#header">Главная</a></li>
                     <li class="menu__item"><a class="menu__link" href="#about">Услуги</a></li>
-                    <li class="menu__item"><a class="menu__link" href="">Контакты</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#contacts">Контакты</a></li>
                 </ul>
-
-
                 <ul class="menu__right menu__list flex-row flex-col-md ai-center">
                     <li class="menu__item"><a class="menu__link" href="">+386666666</a></li>
                     <li class="menu__item"><a class="menu__link" href="">email:olo@gml.com</a></li>
@@ -58,39 +59,65 @@
                 <div class="overlay">
                     <div class="banner__text flex-row">
                         <span class="banner__word banner__word--first-word">Motion</span>
-                        <span class="banner__word banner__word--second-word">Design</span>
-                        <span class="banner__word banner__word--last-word">Addict</span>
+                        <span class="banner__word banner__word--second-word">Addict</span>
+                        <span class="banner__word banner__word--last-word">Design</span>
                     </div>
                 </div>
             </div>
         </div>
     </heder>
-    <section class="about" id="about">
+    <section class="about section" id="about">
         <div class="container">
-            <h3 class="about__title ta-center">
+            <h3 class="about__title section__title ta-center">
                 Lorem ipsum dolor sit amet.
             </h3>
-            <div class="flex-row jc-center ai-center">
-                <div class="img-container col-5 col-12-md"><img src="img/services.png" alt=""></div>
-                <p class="about__text col-5 col-12-md"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero velit vero quam numquam illum voluptate temporibus nam sit provident nulla voluptatem, quisquam placeat fuga nesciunt culpa, ad, dicta distinctio similique.</span>
-                    <span>Sint maxime atque, officiis error! Quae nihil consequatur minus accusantium dignissimos, voluptates labore, dolore doloribus quaerat inventore cum totam voluptatum nobis officiis deleniti fugiat deserunt! At eveniet similique cum, laborum!</span>
-                </p>
-            </div>
-        </div>
-    </section>
-    <section class="services">
-        <div class="container">
-            <h3 class="about__title ta-center">
-                Lorem ipsum dolor sit amet.
-            </h3>
-            <div class="flex-row jc-between ai-center gap">
+            <div class="flex-row jc-around ai-center">
+                <div class="img-container col-2 col-12-md"><img src="img/motion-graphics.svg" alt=""></div>
                 <p class="about__text col-6 col-12-md"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero velit vero quam numquam illum voluptate temporibus nam sit provident nulla voluptatem, quisquam placeat fuga nesciunt culpa, ad, dicta distinctio similique.</span>
                     <span>Sint maxime atque, officiis error! Quae nihil consequatur minus accusantium dignissimos, voluptates labore, dolore doloribus quaerat inventore cum totam voluptatum nobis officiis deleniti fugiat deserunt! At eveniet similique cum, laborum!</span>
                 </p>
-                <div class="thumb-wrap col-5 col-12-md"><iframe src="https://www.youtube.com/embed/L3V7LKYPIUQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
             </div>
         </div>
     </section>
+    <section class="services section">
+        <div class="container">
+            <h3 class="about__title section__title ta-center">
+                Lorem ipsum dolor sit amet.
+            </h3>
+            <div class="flex-row jc-between ai-center gap">
+                <p class="about__text col-5 col-12-md"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero velit vero quam numquam illum voluptate temporibus nam sit provident nulla voluptatem, quisquam placeat fuga nesciunt culpa, ad, dicta distinctio similique.</span>
+                    <span>Sint maxime atque, officiis error! Quae nihil consequatur minus accusantium dignissimos, voluptates labore, dolore doloribus quaerat inventore cum totam voluptatum nobis officiis deleniti fugiat deserunt! At eveniet similique cum, laborum!</span>
+                </p>
+                <div class="services__video thumb-wrap col-5"><iframe iframe width="560" height="315" src="https://www.youtube.com/embed/L3V7LKYPIUQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            </div>
+        </div>
+    </section>
+    <section class="contacts section">
+        <div class="container flex-col ai-center">
+            <h3 class="about__title section__title ta-center">
+                Lorem ipsum dolor sit amet.
+            </h3>
+            <div class="contacts__video thumb-wrap col-12"><iframe iframe width="560" height="315" src="https://www.youtube.com/embed/L3V7LKYPIUQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </div>
+    </section>
+    <footer class="footer" id="contacts">
+        <div class="container flex-row jc-between">
+            <div class="contacts flex-col">
+                <h3 class="contacts__title">Contacts</h3>
+                <div class="contacts__email">madvs@gmaijkj</div>
+                <div class="contacts__telephone">+3456456464</div>
+            </div>
+            <div class="flex-col ai-center">
+                <div class="logo flex-col">MAD<span class="logo--sub">Vision</span>
+                </div>
+                <div class="copy">@2007</div>
+            </div>
+            <div class="adress flex-col">
+                <h3 class="adress__title">Location</h3>
+                <div>My St, 58, 124</div>
+            </div>
+        </div>
+    </footer>
     <link href="https://fonts.googleapis.com/css?family=Bungee+Shade&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Black+Ops+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,700,900&display=swap" rel="stylesheet">

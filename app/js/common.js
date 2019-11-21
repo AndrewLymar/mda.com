@@ -4,29 +4,14 @@ $(function () {
     $('nav').mobileMenu({
         menuIconClassName: ".menu-icon",
         mobileResolution: 768,
-        menuType: "sticky",
+        menuType: "fixed",
         offsetToSticky: 50,
         closeIconClassName: ".close-menu-icon"
     });
 
-    window.addEventListener('scroll', scrollFunc);
-
-    function scrollFunc() {
-        var windowScroll = this.scrollY;
-
-        //var $logo = document.getElementsByClassName('logo')[0];
-        //$logo.style.transform = 'translateY(' + windowScroll / 2 + '%)';
-
-        //var $backBird = document.getElementsByClassName('back-bird')[0];
-        //$backBird.style.transform = 'translateY(' + windowScroll / 4 + '%)';
-
-        var $foreBird = document.getElementsByClassName('fore-bird')[0];
-        $foreBird.style.transform = 'translateY(-' + windowScroll / 100 + '%)';
-
-    }
-
     function dynamicGradient() {
         var colors = new Array(
+
   [62, 35, 255],
   [60, 255, 60],
   [255, 35, 98],
@@ -34,6 +19,10 @@ $(function () {
   [255, 0, 255],
   [255, 128, 0]);
 
+        /*
+    [0, 0, 0],
+    [239, 79, 179];
+    */
         var step = 0;
         //color table indices for: 
         // current color left
