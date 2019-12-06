@@ -46,7 +46,7 @@ gulp.task('js', function () {
 		'app/js/common.js'
 		])
         .pipe(concat('scripts.min.js'))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest('app'))
 });
 
