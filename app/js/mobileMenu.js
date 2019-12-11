@@ -74,7 +74,7 @@
 
         function onScroll(event) {
             scrollPos = $(document).scrollTop();
-            if (documentWidth >= options.mobileResolution) {
+            if (true) {
                 if (options.menuType == "sticky") {
                     fixedMenu();
                 }

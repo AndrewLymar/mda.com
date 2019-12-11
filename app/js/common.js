@@ -74,78 +74,73 @@ $(function () {
             }
         }
         setInterval(updateGradient, 10);
-    }
 
-    var currentTab = 0; // Current tab is set to be the first tab (0)
-    showTab(currentTab); // Display the crurrent tab
+        $projectForm = document.getElementsByClassName("project__form");
 
-    function showTab(n) {
-        // This function will display the specified tab of the form...
-        var x = document.getElementsByClassName("tab");
-        x[n].style.display = "block";
-        //... and fix the Previous/Next buttons:
-        if (n == 0) {
-            document.getElementById("prevBtn").style.display = "none";
-        } else {
-            document.getElementById("prevBtn").style.display = "inline";
-        }
-        if (n == (x.length - 1)) {
-            document.getElementById("nextBtn").innerHTML = "Submit";
-        } else {
-            document.getElementById("nextBtn").innerHTML = "Next";
-        }
-        //... and run a function that will display the correct step indicator:
-        fixStepIndicator(n)
-    }
+        $buttonNext = $(".project__button-next");
+        $buttonPrev = $(".project__button-prev");
+        $buttonMore = $(".project__button-more");
+        $buttonSend = $(".project__button-send");
 
-    function nextPrev(n) {
-        // This function will figure out which tab to display
-        var x = document.getElementsByClassName("tab");
-        // Exit the function if any field in the current tab is invalid:
-        if (n == 1 && !validateForm()) return false;
-        // Hide the current tab:
-        x[currentTab].style.display = "none";
-        // Increase or decrease the current tab by 1:
-        currentTab = currentTab + n;
-        // if you have reached the end of the form...
-        if (currentTab >= x.length) {
-            // ... the form gets submitted:
-            document.getElementById("regForm").submit();
-            return false;
-        }
-        // Otherwise, display the correct tab:
-        showTab(currentTab);
-    }
+        var currentTabNum = 1;
 
-    function validateForm() {
-        // This function deals with validation of the form fields
-        var x, y, i, valid = true;
-        x = document.getElementsByClassName("tab");
-        y = x[currentTab].getElementsByTagName("input");
-        // A loop that checks every input field in the current tab:
-        for (i = 0; i < y.length; i++) {
-            // If a field is empty...
-            if (y[i].value == "") {
-                // add an "invalid" class to the field:
-                y[i].className += " invalid";
-                // and set the current valid status to false
-                valid = false;
+        $tab1 = $(".tab-1");
+        $tab2 = $(".tab-2");
+        $tab3 = $(".tab-3");
+
+        $buttonMore.on("click", showNext);
+        $buttonNext.on("click", showNext);
+        $buttonPrev.on("click", showPrev);
+
+
+        function showNext() {
+            /*$projectForm[0].checkValidity()*/
+            if (true) {
+                $buttonPrev.show(300);
+                switch (currentTabNum) {
+                    case 1:
+                        $tab1.hide(300);
+                        $tab2.show(300);
+                        $buttonPrev.show(300);
+                        $buttonNext.show(300);
+                        $buttonSend.hide(300);
+                        $buttonMore.hide(300);
+                        break;
+                    case 2:
+                        $tab2.hide(300);
+                        $tab3.show(300);
+                        $buttonNext.hide(300);
+                        $buttonSend.show(300);
+                        break;
+                }
+                currentTabNum++;
+            } else {
+                $errorMessage = $(".error-message");
+                $errorMessage.show(300);
+                setTimeout(function () {
+                    $errorMessage.hide(300);
+                }, 3000);
             }
         }
-        // If the valid status is true, mark the step as finished and valid:
-        if (valid) {
-            document.getElementsByClassName("step")[currentTab].className += " finish";
-        }
-        return valid; // return the valid status
-    }
 
-    function fixStepIndicator(n) {
-        // This function removes the "active" class of all steps...
-        var i, x = document.getElementsByClassName("step");
-        for (i = 0; i < x.length; i++) {
-            x[i].className = x[i].className.replace(" active", "");
+        function showPrev() {
+            switch (currentTabNum) {
+                case 3:
+                    $tab3.hide(300);
+                    $tab2.show(300);
+                    $buttonNext.show(300);
+                    $buttonSend.hide(300);
+                    break;
+                case 2:
+                    $tab2.hide(300);
+                    $tab1.show(300);
+                    $buttonPrev.hide(300);
+                    $buttonMore.show(300);
+                    $buttonNext.hide(300);
+                    $buttonSend.show(300);
+                    break;
+            }
+            currentTabNum--;
         }
-        //... and adds the "active" class on the current step:
-        x[n].className += " active";
     }
 });
