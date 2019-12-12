@@ -705,6 +705,11 @@ section.section__title {
     .videos {
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); } }
 
+@media only screen and (max-width: 480px) {
+  section.videos {
+    padding-top: 0px;
+    padding-bottom: 0px; } }
+
 .about {
   padding-top: 200px;
   padding-bottom: 200px;
@@ -716,6 +721,9 @@ section.section__title {
     font-weight: 300;
     line-height: 1.7em;
     color: #E6E6E6; }
+    @media only screen and (max-width: 480px) {
+      .about__text {
+        font-size: 18px; } }
     .about__text span {
       color: #ff3; }
 
@@ -723,11 +731,16 @@ section.section__title {
   padding-top: 100px;
   padding-bottom: 100px;
   font-family: Montserrat, sans-serif;
-  font-size: 28px; }
+  font-size: 26px; }
   .steps__title {
     text-transform: uppercase; }
   .steps__description {
     margin-top: 50px; }
+    @media only screen and (max-width: 480px) {
+      .steps__description {
+        font-size: 18px;
+        margin-top: 25px;
+        margin-bottom: 25px; } }
 
 .step {
   margin-top: 50px;
@@ -735,17 +748,23 @@ section.section__title {
   .step__number {
     margin-top: 20px;
     margin-right: 50px;
-    font-size: 48px;
+    font-size: 40px;
     line-height: 27px; }
     @media only screen and (max-width: 480px) {
       .step__number {
         margin: 0;
         margin-bottom: 25px; } }
   .step__title {
-    font-size: 38px; }
+    font-size: 36px; }
+    @media only screen and (max-width: 480px) {
+      .step__title {
+        font-size: 26px; } }
   .step__description {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 300; }
+    @media only screen and (max-width: 480px) {
+      .step__description {
+        font-size: 16px; } }
 
 .project {
   padding-top: 100px;
@@ -756,7 +775,20 @@ section.section__title {
     font-size: 28px;
     color: #fff;
     text-transform: uppercase; }
+  .project__description, .project__or {
+    margin-top: 25px;
+    font-size: 20px;
+    color: #E6E6E6; }
+  .project__or {
+    margin-top: 60px; }
+  .project__phone, .project__email {
+    margin-top: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 22px;
+    color: #E6E6E6; }
   .project__form {
+    margin-top: 50px;
     width: 522px; }
     @media only screen and (max-width: 768px) {
       .project__form {
@@ -839,6 +871,12 @@ section.section__title {
     background-color: none; }
   .project .attach + label {
     cursor: pointer; }
+  .project [type="date"] {
+    background: #0f1113 url("../../img/calendar.png") center right no-repeat; }
+  .project [type="date"]::-webkit-inner-spin-button {
+    display: none; }
+  .project [type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0; }
   .project .error-message {
     display: none;
     margin-top: 25px;
@@ -846,10 +884,19 @@ section.section__title {
     color: #ff3; }
 
 .footer {
-  padding-top: 45px;
-  padding-bottom: 45px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   background: #000;
+  font-family: Montserrat, sans-serif;
   color: #fff; }
+  @media only screen and (max-width: 480px) {
+    .footer {
+      padding-top: 50px;
+      padding-bottom: 50px; } }
+  @media only screen and (max-width: 480px) {
+    .footer__block {
+      order: 3;
+      margin-top: 55px; } }
 
 .actions {
   color: #fff; }
@@ -867,8 +914,26 @@ section.section__title {
   .social:hover {
     fill: #FFFF33; }
 
+.contacts__title {
+  font-size: 18px;
+  text-transform: uppercase; }
+
+.contacts__email {
+  font-size: 16px; }
+
 .contacts__email, .contacts__telephone {
   margin-top: 30px; }
 
 .copy {
-  margin-top: 150px; }
+  margin-top: 25px;
+  font-size: 10px; }
+
+@media only screen and (max-width: 480px) {
+  .address {
+    margin-top: 50px; } }
+
+.address__title {
+  text-transform: uppercase; }
+
+.address__text {
+  margin-top: 30px; }

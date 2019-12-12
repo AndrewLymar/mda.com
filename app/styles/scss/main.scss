@@ -293,6 +293,13 @@ section.section {
 
 }
 
+section.videos {
+    @media only screen and (max-width: $sm) {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
+
 .about {
     padding-top: 200px;
     padding-bottom: 200px;
@@ -306,6 +313,10 @@ section.section {
         line-height: 1.7em;
         color: #E6E6E6;
 
+        @media only screen and (max-width: $sm) {
+            font-size: 18px;
+        }
+
         span {
             color: $second-color;
         }
@@ -316,19 +327,20 @@ section.section {
     padding-top: 100px;
     padding-bottom: 100px;
     font-family: Montserrat, sans-serif;
-    font-size: 28px;
-    //background: $main-color;
-
-
+    font-size: 26px;
 
     &__title {
         text-transform: uppercase;
-        //color: #fff;
     }
 
     &__description {
         margin-top: 50px;
-        //color: #e6e6e6;
+
+        @media only screen and (max-width: $sm) {
+            font-size: 18px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
     }
 }
 
@@ -339,29 +351,32 @@ section.section {
     &__number {
         margin-top: 20px;
         margin-right: 50px;
-        font-size: 48px;
+        font-size: 40px;
         line-height: 27px;
 
         @media only screen and (max-width: $sm) {
             margin: 0;
             margin-bottom: 25px;
         }
-
-        //color: $second-color;
-        //color: #e6e6e6;
     }
 
-    &__text {
-        //color: #e6e6e6;
-    }
+    &__text {}
 
     &__title {
-        font-size: 38px;
+        font-size: 36px;
+
+        @media only screen and (max-width: $sm) {
+            font-size: 26px;
+        }
     }
 
     &__description {
-        font-size: 24px;
+        font-size: 22px;
         font-weight: 300;
+
+        @media only screen and (max-width: $sm) {
+            font-size: 16px;
+        }
     }
 }
 
@@ -377,7 +392,29 @@ section.section {
         text-transform: uppercase;
     }
 
+    &__description,
+    &__or {
+        margin-top: 25px;
+        font-size: 20px;
+        color: #E6E6E6;
+    }
+
+    &__or {
+        margin-top: 60px;
+    }
+
+    &__phone,
+    &__email {
+        margin-top: 25px;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 22px;
+        color: #E6E6E6;
+
+    }
+
     &__form {
+        margin-top: 50px;
         width: 522px;
 
         @media only screen and (max-width: $md) {
@@ -508,6 +545,18 @@ section.section {
         cursor: pointer;
     }
 
+    [type="date"] {
+        background: #0f1113 url("../../img/calendar.png") center right no-repeat;
+    }
+
+    [type="date"]::-webkit-inner-spin-button {
+        display: none;
+    }
+
+    [type="date"]::-webkit-calendar-picker-indicator {
+        opacity: 0;
+    }
+
     .error-message {
         display: none;
         margin-top: 25px;
@@ -515,13 +564,28 @@ section.section {
         color: $second-color;
     }
 
+
 }
 
 .footer {
-    padding-top: 45px;
-    padding-bottom: 45px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     background: #000;
+    font-family: Montserrat, sans-serif;
     color: #fff;
+
+    @media only screen and (max-width: $sm) {
+
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    &__block {
+        @media only screen and (max-width: $sm) {
+            order: 3;
+            margin-top: 55px;
+        }
+    }
 }
 
 .actions {
@@ -549,6 +613,19 @@ section.section {
 
 .contacts {
 
+    @media only screen and (max-width: $sm) {
+        //margin-top: 25px;
+    }
+
+    &__title {
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+
+    &__email {
+        font-size: 16px;
+    }
+
     &__email,
     &__telephone {
         margin-top: 30px;
@@ -556,7 +633,22 @@ section.section {
 }
 
 .copy {
-    margin-top: 150px;
+    margin-top: 25px;
+    font-size: 10px;
+}
+
+.address {
+    @media only screen and (max-width: $sm) {
+        margin-top: 50px;
+    }
+
+    &__title {
+        text-transform: uppercase;
+    }
+
+    &__text {
+        margin-top: 30px;
+    }
 }
 
 

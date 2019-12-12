@@ -1479,6 +1479,21 @@ section.section__title {
   color: #e6e6e6;
 }
 
+@media only screen and (max-width:480px) {
+  .videos {
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  }
+
+  section.videos {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .about__text {
+    font-size: 18px;
+  }
+}
+
 .about__text span {
   color: #ff3;
 }
@@ -1487,7 +1502,7 @@ section.section__title {
   padding-top: 100px;
   padding-bottom: 100px;
   font-family: Montserrat,sans-serif;
-  font-size: 28px;
+  font-size: 26px;
 }
 
 .steps__title {
@@ -1498,6 +1513,14 @@ section.section__title {
   margin-top: 50px;
 }
 
+@media only screen and (max-width:480px) {
+  .steps__description {
+    font-size: 18px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
+
 .step {
   margin-top: 50px;
   font-family: Montserrat,sans-serif;
@@ -1506,27 +1529,33 @@ section.section__title {
 .step__number {
   margin-top: 20px;
   margin-right: 50px;
-  font-size: 48px;
+  font-size: 40px;
   line-height: 27px;
 }
 
-@media only screen and (max-width:480px) {
-  .videos {
-    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
-  }
+.step__title {
+  font-size: 36px;
+}
 
+@media only screen and (max-width:480px) {
   .step__number {
     margin: 0 0 25px;
   }
-}
 
-.step__title {
-  font-size: 38px;
+  .step__title {
+    font-size: 26px;
+  }
 }
 
 .step__description {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 300;
+}
+
+@media only screen and (max-width:480px) {
+  .step__description {
+    font-size: 16px;
+  }
 }
 
 .project {
@@ -1542,7 +1571,28 @@ section.section__title {
   text-transform: uppercase;
 }
 
+.project__description,
+.project__or {
+  margin-top: 25px;
+  font-size: 20px;
+  color: #e6e6e6;
+}
+
+.project__or {
+  margin-top: 60px;
+}
+
+.project__email,
+.project__phone {
+  margin-top: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 22px;
+  color: #e6e6e6;
+}
+
 .project__form {
+  margin-top: 50px;
   width: 522px;
 }
 
@@ -1724,6 +1774,18 @@ section.section__title {
   background-color: none;
 }
 
+.project [type=date] {
+  background: url("../../img/calendar.png") center right no-repeat #0f1113;
+}
+
+.project [type=date]::-webkit-inner-spin-button {
+  display: none;
+}
+
+.project [type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
 .project .error-message {
   display: none;
   margin-top: 25px;
@@ -1732,10 +1794,25 @@ section.section__title {
 }
 
 .footer {
-  padding-top: 45px;
-  padding-bottom: 45px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   background: #000;
+  font-family: Montserrat,sans-serif;
   color: #fff;
+}
+
+@media only screen and (max-width:480px) {
+  .footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .footer__block {
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+    margin-top: 55px;
+  }
 }
 
 .actions {
@@ -1765,11 +1842,35 @@ section.section__title {
   fill: #ff3;
 }
 
+.contacts__title {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.contacts__email {
+  font-size: 16px;
+}
+
 .contacts__email,
 .contacts__telephone {
   margin-top: 30px;
 }
 
 .copy {
-  margin-top: 150px;
+  margin-top: 25px;
+  font-size: 10px;
+}
+
+@media only screen and (max-width:480px) {
+  .address {
+    margin-top: 50px;
+  }
+}
+
+.address__title {
+  text-transform: uppercase;
+}
+
+.address__text {
+  margin-top: 30px;
 }
