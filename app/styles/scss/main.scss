@@ -118,15 +118,6 @@ section.section {
     transition: all 0.4s ease;
     z-index: 99999;
 
-    &__left {
-        grid-area: menu-left;
-        justify-self: start;
-
-        @media only screen and (max-width: $md) {
-            justify-self: center;
-        }
-    }
-
     &__right {
         grid-area: menu-right;
         justify-self: end;
@@ -163,6 +154,7 @@ section.section {
     }
 
     &__link {
+        position: relative;
         font-family: 'Open Sans Condensed', sans-serif;
         font-size: 20px;
         text-transform: uppercase;
@@ -173,11 +165,75 @@ section.section {
             font-size: 24px;
         }
 
+        /*
+        &:hover {
+           
+
+            .language__switcher.arrow-left {
+                border-left-color: $second-color;
+            }
+
+            .language__switcher.arrow-right {
+                border-right-color: $second-color;
+            }
+        }
+        */
+    }
+
+    &__link.mc,
+    .language__current,
+    .language__ch {
         &:hover {
             color: $second-color;
         }
+
+    }
+}
+
+.language {
+    position: relative;
+
+    &__switcher {
+        margin-left: 5px;
+        transition: all 0.4s ease;
+        cursor: pointer;
+
+        @media only screen and (max-width: $sm) {
+            display: none;
+        }
     }
 
+    &__switcher.arrow-left {
+        border: 5px solid transparent;
+        border-left: 5px solid #fff;
+
+        &:hover {
+            border-left-color: $second-color;
+        }
+    }
+
+    &__switcher.arrow-right {
+        border: 5px solid transparent;
+        border-right: 5px solid #fff;
+
+        &:hover {
+            border-right-color: $second-color;
+        }
+    }
+
+    &__curent {}
+
+    &__ch {
+        display: none;
+        margin-left: 5px;
+        color: #fff;
+
+        @media only screen and (max-width: $sm) {
+            display: block !important;
+            margin-top: 20px;
+            margin-left: 0;
+        }
+    }
 }
 
 .sticky-menu {
@@ -555,6 +611,10 @@ section.videos {
 
     [type="date"]::-webkit-calendar-picker-indicator {
         opacity: 0;
+    }
+
+    .last-order {
+        order: 3;
     }
 
     .error-message {

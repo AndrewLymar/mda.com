@@ -13,7 +13,6 @@
         var $menuLinks = $menu.find("a");
         var $menuIcon = $(options.menuIconClassName);
         var $closeIcon = $(options.closeIconClassName);
-        //var $menuGrid = $(".menu-grid");
         var currentMenuHeight = $menu.outerHeight();
         var documentWidth = $(document).width();
         var menuHeightFixed;
@@ -55,7 +54,6 @@
         }
 
         function onClickChangeState(event) {
-            //$menuGrid.toggleClass("mobile");
             if (!menuIsOpened) {
                 showMenu();
             } else {
@@ -74,13 +72,12 @@
 
         function onScroll(event) {
             scrollPos = $(document).scrollTop();
-            if (true) {
-                if (options.menuType == "sticky") {
-                    fixedMenu();
-                }
-                if (options.menuType == "custom") {
-                    customMenu();
-                }
+
+            if (options.menuType == "sticky") {
+                fixedMenu();
+            }
+            if (options.menuType == "custom") {
+                customMenu();
             }
             $menuLinks.each(function () {
                 var currLink = $(this);
@@ -95,7 +92,7 @@
         function scrollTo(event) {
             var target = this.hash;
             var $target = $(target);
-            event.preventDefault();
+            //event.preventDefault();
             if ($(document).width() <= options.mobileResolution) {
                 hideMenu();
             }

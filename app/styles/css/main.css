@@ -594,12 +594,6 @@ section.section__title {
   padding: 10px 50px;
   transition: all 0.4s ease;
   z-index: 99999; }
-  .menu__left {
-    grid-area: menu-left;
-    justify-self: start; }
-    @media only screen and (max-width: 768px) {
-      .menu__left {
-        justify-self: center; } }
   .menu__right {
     grid-area: menu-right;
     justify-self: end; }
@@ -625,16 +619,61 @@ section.section__title {
     .menu__item:last-child {
       margin-right: 0; }
   .menu__link {
+    position: relative;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 20px;
     text-transform: uppercase;
     text-decoration: none;
-    transition: all 0.4s ease; }
+    transition: all 0.4s ease;
+    /*
+        &:hover {
+           
+
+            .language__switcher.arrow-left {
+                border-left-color: $second-color;
+            }
+
+            .language__switcher.arrow-right {
+                border-right-color: $second-color;
+            }
+        }
+        */ }
     @media only screen and (max-width: 768px) {
       .menu__link {
         font-size: 24px; } }
-    .menu__link:hover {
-      color: #ff3; }
+  .menu__link.mc:hover,
+  .menu .language__current:hover,
+  .menu .language__ch:hover {
+    color: #ff3; }
+
+.language {
+  position: relative; }
+  .language__switcher {
+    margin-left: 5px;
+    transition: all 0.4s ease;
+    cursor: pointer; }
+    @media only screen and (max-width: 480px) {
+      .language__switcher {
+        display: none; } }
+  .language__switcher.arrow-left {
+    border: 5px solid transparent;
+    border-left: 5px solid #fff; }
+    .language__switcher.arrow-left:hover {
+      border-left-color: #ff3; }
+  .language__switcher.arrow-right {
+    border: 5px solid transparent;
+    border-right: 5px solid #fff; }
+    .language__switcher.arrow-right:hover {
+      border-right-color: #ff3; }
+  .language__ch {
+    display: none;
+    margin-left: 5px;
+    color: #fff; }
+    @media only screen and (max-width: 480px) {
+      .language__ch {
+        display: block !important;
+        margin-top: 20px;
+        margin-left: 0; } }
 
 .sticky-menu {
   background: #0F1113; }
@@ -877,6 +916,8 @@ section.section__title {
     display: none; }
   .project [type="date"]::-webkit-calendar-picker-indicator {
     opacity: 0; }
+  .project .last-order {
+    order: 3; }
   .project .error-message {
     display: none;
     margin-top: 25px;

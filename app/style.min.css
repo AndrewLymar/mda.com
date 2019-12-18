@@ -1287,25 +1287,6 @@ section.section__title {
   z-index: 99999;
 }
 
-.menu__left {
-  grid-area: menu-left;
-  justify-self: start;
-}
-
-@media only screen and (max-width:768px) {
-  .menu-grid {
-    grid-template-areas: "logo ." "menu-right menu-right ";
-  }
-
-  .menu-icon {
-    display: block;
-  }
-
-  .menu__left {
-    justify-self: center;
-  }
-}
-
 .menu__right {
   grid-area: menu-right;
   justify-self: end;
@@ -1328,6 +1309,7 @@ section.section__title {
 }
 
 .menu__link {
+  position: relative;
   font-family: 'Open Sans Condensed',sans-serif;
   font-size: 20px;
   text-transform: uppercase;
@@ -1338,6 +1320,14 @@ section.section__title {
 }
 
 @media only screen and (max-width:768px) {
+  .menu-grid {
+    grid-template-areas: "logo ." "menu-right menu-right ";
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
   .menu__right {
     margin-bottom: 30px;
     justify-self: center;
@@ -1357,14 +1347,60 @@ section.section__title {
   .menu__link {
     font-size: 24px;
   }
-
-  .services__video {
-    margin-top: 50px;
-  }
 }
 
-.menu__link:hover {
+.menu .language__ch:hover,
+.menu .language__current:hover,
+.menu__link.mc:hover {
   color: #ff3;
+}
+
+.language {
+  position: relative;
+}
+
+.language__switcher {
+  margin-left: 5px;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+  cursor: pointer;
+}
+
+.language__switcher.arrow-left {
+  border: 5px solid transparent;
+  border-left: 5px solid #fff;
+}
+
+.language__switcher.arrow-left:hover {
+  border-left-color: #ff3;
+}
+
+.language__switcher.arrow-right {
+  border: 5px solid transparent;
+  border-right: 5px solid #fff;
+}
+
+.language__switcher.arrow-right:hover {
+  border-right-color: #ff3;
+}
+
+.language__ch {
+  display: none;
+  margin-left: 5px;
+  color: #fff;
+}
+
+@media only screen and (max-width:480px) {
+  .language__switcher {
+    display: none;
+  }
+
+  .language__ch {
+    display: block!important;
+    margin-top: 20px;
+    margin-left: 0;
+  }
 }
 
 .sticky-menu {
@@ -1442,6 +1478,12 @@ section.section__title {
 
 .services {
   background: #fff;
+}
+
+@media only screen and (max-width:768px) {
+  .services__video {
+    margin-top: 50px;
+  }
 }
 
 .videos {
@@ -1784,6 +1826,12 @@ section.section__title {
 
 .project [type=date]::-webkit-calendar-picker-indicator {
   opacity: 0;
+}
+
+.project .last-order {
+  -webkit-box-ordinal-group: 4;
+  -ms-flex-order: 3;
+  order: 3;
 }
 
 .project .error-message {
