@@ -55,9 +55,13 @@
 
         function onClickChangeState(event) {
             if (!menuIsOpened) {
+                $menu.addClass("sticky-menu");
                 showMenu();
             } else {
                 hideMenu();
+                if (documentWidth > options.mobileResolution) {
+                    $menu.removeClass("sticky-menu");
+                }
             }
         }
 
@@ -79,6 +83,7 @@
             if (options.menuType == "custom") {
                 customMenu();
             }
+            /*
             $menuLinks.each(function () {
                 var currLink = $(this);
                 var refElement = $(currLink.attr("href"));
@@ -87,6 +92,7 @@
                     currLink.addClass("active");
                 }
             });
+            */
         }
 
         function scrollTo(event) {
@@ -114,7 +120,7 @@
                 currentMenuHeight = menuHeightFixed;
                 $menu.removeClass("sticky-menu");
             }
-            offset = currentMenuHeight;
+            //offset = currentMenuHeight;
         }
 
         function customMenu() {
