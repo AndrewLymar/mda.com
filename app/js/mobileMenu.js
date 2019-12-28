@@ -23,7 +23,7 @@
 
         if (documentWidth >= options.mobileResolution) {
             if (options.menuType == "sticky") {
-                currentMenuHeight = $menu.outerHeight() * 2;
+                currentMenuHeight = $menu.outerHeight();
                 menuHeightFixed = currentMenuHeight;
                 offset = currentMenuHeight;
             }
@@ -120,7 +120,10 @@
                 currentMenuHeight = menuHeightFixed;
                 $menu.removeClass("sticky-menu");
             }
-            //offset = currentMenuHeight;
+
+            if (documentWidth >= options.mobileResolution) {
+                offset = currentMenuHeight;
+            }
         }
 
         function customMenu() {
