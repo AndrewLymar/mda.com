@@ -160,4 +160,15 @@ $(function () {
             $languageSwitcher.addClass("arrow-left");
         }
     });
+    $(".project__form").submit(function (e) {
+        e.preventDefault();
+        var $form = $(this);
+        $(".success").fadeIn(0);
+        $.post($form.attr("action"), $form.serialize()).then(function () {
+            $(".success").text("Мы получили ваш запрос и свяжемся с вами в ближайшее время");
+            setTimeout(function () {
+                $(".success ").fadeOut();
+            }, 2000);
+        });
+    });
 });

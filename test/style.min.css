@@ -1895,7 +1895,8 @@ section.section__title {
   order: 3;
 }
 
-.project .error-message {
+.project .error-message,
+.project .success {
   display: none;
   margin-top: 25px;
   font-size: 20px;

@@ -932,6 +932,11 @@ section.section__title {
     margin-top: 25px;
     font-size: 20px;
     color: #ff3; }
+  .project .success {
+    display: none;
+    margin-top: 25px;
+    font-size: 20px;
+    color: #ff3; }
 
 .footer {
   padding-top: 100px;
