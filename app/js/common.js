@@ -117,22 +117,24 @@ $(function () {
         const formData = new FormData(testForm);
         fetch(testForm.getAttribute('action'), {
                 method: 'POST',
-                headers: {
-                    'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
-                    'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-                },
+                /*
+                    processData: false,
+                    contentType: false,
+                    headers: {
+                        'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
+                        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+                    },
+                    */
                 body: new URLSearchParams(formData).toString()
             })
-            .then(res => {
-                if (res) {
-                    setTimeout(function () {
-                        $(".success").text("Мы получили ваш запрос и свяжемся с вами в ближайшее время");
-                    }, 1000);
+            .then(function () {
+                setTimeout(function () {
+                    $(".success").text("Мы получили ваш запрос и свяжемся с вами в ближайшее время");
+                }, 1000);
 
-                    setTimeout(function () {
-                        $(".success ").fadeOut();
-                    }, 4000);
-                }
+                setTimeout(function () {
+                    $(".success ").fadeOut();
+                }, 4000);
             });
     });
     /*
