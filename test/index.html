@@ -111,10 +111,10 @@
             <div class="project__description ta-center-sm">
                 Начните новый проект, заполнив форму
             </div>
-            <form class="project__form" action="" method="POST" data-netlify="true">
+            <form class="project__form" action="" method="POST" enctype="multipart/form-data" data-netlify="true">
                 <div class="tab tab-1">
                     <div class="project__inner col">
-                        <input type="text" class="project__input project__input--long" name="name" pattern="^[А-Яа-яЁёa-zA-ZА-ЯІЇЄҐа-яіїєґ\s]+$" placeholder="Name" required>
+                        <input type="text" class="project__input project__input--long" name="your_name" pattern="^[А-Яа-яЁёa-zA-ZА-ЯІЇЄҐа-яіїєґ\s]+$" placeholder="Name" required>
                     </div>
                     <div class="project__inner flex-row jc-between">
                         <input type="text" class="project__input col-5 col-12-sm" name="phone" pattern="^((8|0|\+\d{1,2})[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" placeholder="Phone" required>

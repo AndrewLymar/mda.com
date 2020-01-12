@@ -29,5 +29,8 @@
     "gulp-uglify": "latest",
     "gulp-util": "latest",
     "vinyl-ftp": "latest"
+  },
+  "dependencies": {
+    "query-string": "^6.9.0"
   }
 }
