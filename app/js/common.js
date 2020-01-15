@@ -1,5 +1,4 @@
 $(function () {
-
     $("nav").mobileMenu({
         menuIconClassName: ".menu-icon",
         mobileResolution: 768,
