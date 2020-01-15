@@ -561,16 +561,15 @@ section.section__title {
 .menu-grid.mobile {
   height: 100vh; }
 
-.logo {
-  cursor: pointer; }
-  .logo__img {
-    margin-right: 5px;
-    fill: #fff; }
-  .logo__text {
-    font-family: 'Raleway', sans-serif;
-    font-size: 30px;
-    font-weight: 300;
-    color: #fff; }
+.logo__img {
+  margin-right: 5px;
+  fill: #fff; }
+
+.logo__text {
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  color: #fff; }
 
 .menu__logo {
   margin-right: 25px; }
@@ -692,6 +691,7 @@ section.section__title {
       color: #9f3; }
 
 .banner__text {
+  display: none;
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 58px;
   color: #fff; }

@@ -1295,10 +1295,6 @@ section.section__title {
   height: 100vh;
 }
 
-.logo {
-  cursor: pointer;
-}
-
 .logo__img {
   margin-right: 5px;
   fill: #fff;
@@ -1478,6 +1474,7 @@ section.section__title {
 }
 
 .banner__text {
+  display: none;
   font-family: 'M PLUS Rounded 1c',sans-serif;
   font-size: 58px;
   color: #fff;

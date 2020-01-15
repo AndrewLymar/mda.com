@@ -75,8 +75,6 @@ section.section {
 }
 
 .logo {
-    cursor: pointer;
-
     &__img {
         margin-right: 5px;
         fill: #fff;
@@ -264,6 +262,7 @@ section.section {
     }
 
     &__text {
+        display: none;
         font-family: 'M PLUS Rounded 1c', sans-serif;
         font-size: 58px;
         color: #fff;
