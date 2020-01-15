@@ -75,6 +75,8 @@ section.section {
 }
 
 .logo {
+    cursor: pointer;
+
     &__img {
         margin-right: 5px;
         fill: #fff;

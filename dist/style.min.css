@@ -1295,6 +1295,10 @@ section.section__title {
   height: 100vh;
 }
 
+.logo {
+  cursor: pointer;
+}
+
 .logo__img {
   margin-right: 5px;
   fill: #fff;
