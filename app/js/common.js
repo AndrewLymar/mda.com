@@ -125,16 +125,57 @@ $(function () {
 
             fetch('your-upload-url', options);
             */
+    /*
+        let testForm = document.querySelector(".project__form");
 
-    let testForm = document.querySelector(".project__form");
+        testForm.addEventListener('submit', e => {
+            e.preventDefault();
+            const fileInput = document.querySelector('.attach');
+            const formData = new FormData();
 
-    testForm.addEventListener('submit', e => {
-        e.preventDefault();
-        const fileInput = document.querySelector('.attach');
-        const formData = new FormData();
+            formData.append('file', fileInput.files[0]);
 
-        formData.append('file', fileInput.files[0]);
+            function encode(data) {
+                const formData = new FormData();
 
+                for (const key of Object.keys(data)) {
+                    if (key === 'repairs_files') {
+                        const files = Object.entries(data[key]);
+                        let filesArr = [];
+                        files.map(file => {
+                            return filesArr.push(file[1]);
+                        })
+                        formData.append(key, filesArr);
+                    } else {
+                        formData.append(key, data[key]);
+                    }
+                }
+                return formData;
+            }
+            fetch(testForm.getAttribute('action'), {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
+                        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+                    },
+                    body: new URLSearchParams(formData).toString()
+                })
+                
+                    .then(response => {
+                        setTimeout(function () {
+                            $(".success").text("Мы получили ваш запрос и свяжемся с вами в ближайшее время");
+                        }, 1000);
+
+                        setTimeout(function () {
+                            $(".success ").fadeOut();
+                        }, 4000);
+                    });
+                    
+                .then(response => alert('Сообщение отправлено'))
+                .catch(error => console.error(error))
+        });
+    /*
+        /*
         function encode(data) {
             const formData = new FormData();
 
@@ -152,91 +193,74 @@ $(function () {
             }
             return formData;
         }
-        fetch(testForm.getAttribute('action'), {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
-                    'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-                },
-                body: new URLSearchParams(formData).toString()
-            })
-            /*
-                .then(response => {
-                    setTimeout(function () {
-                        $(".success").text("Мы получили ваш запрос и свяжемся с вами в ближайшее время");
-                    }, 1000);
+        const testForm = document.querySelector(".project__form");
 
-                    setTimeout(function () {
-                        $(".success ").fadeOut();
-                    }, 4000);
-                });
-                */
-            .then(response => alert('Сообщение отправлено'))
-            .catch(error => console.error(error))
-    });
-
-    /*
-    function encode(data) {
-        const formData = new FormData();
-
-        for (const key of Object.keys(data)) {
-            if (key === 'repairs_files') {
-                const files = Object.entries(data[key]);
-                let filesArr = [];
-                files.map(file => {
-                    return filesArr.push(file[1]);
+        const ajaxSend = (data) => {
+            fetch(testForm.getAttribute('action'), { // файл-обработчик 
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
+                        'Content-Type': 'application/x-www-form-urlencoded' // отправляемые данные 
+                    },
+                    body: new URLSearchParams(data).toString()
                 })
-                formData.append(key, filesArr);
-            } else {
-                formData.append(key, data[key]);
-            }
+                .then(response => alert('Сообщение отправлено'))
+                .catch(error => console.error(error))
         }
-        return formData;
-    }
-    const testForm = document.querySelector(".project__form");
+        testForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            ajaxSend(formData);
+            this.reset(); // очищаем поля формы 
+        });
 
-    const ajaxSend = (data) => {
-        fetch(testForm.getAttribute('action'), { // файл-обработчик 
+        /*
+        const encode = (data) => {
+            const formData = new FormData()
+            Object.keys(data)
+                .map(key => {
+                    if (key === 'files') {
+                        for (const file of data[key]) {
+                            formData.append(key, file, file.name)
+                        }
+                    } else {
+                        formData.append(key, data[key])
+                    }
+                })
+            return formData
+        }
+
+        fetch('/', {
+            method: 'POST',
+            body: encode({
+                'form-name': '.project__form',
+                ...this.state,
+                userId: netlifyIdentity.currentUser().id
+            }),
+        })
+        */
+    const processForm = form => {
+        const data = new FormData(form);
+        const fileInput = document.querySelector('.attach');
+        data.append('file', fileInput.files[0]);
+        //data.append('form-name', 'newsletter');
+        fetch(form.getAttribute('action'), {
                 method: 'POST',
-                headers: {
-                    'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
-                    'Content-Type': 'application/x-www-form-urlencoded' // отправляемые данные 
-                },
+                //body: data,
                 body: new URLSearchParams(data).toString()
             })
-            .then(response => alert('Сообщение отправлено'))
-            .catch(error => console.error(error))
-    }
-    testForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-        const formData = new FormData(this);
-        ajaxSend(formData);
-        this.reset(); // очищаем поля формы 
-    });
-
-    /*
-    const encode = (data) => {
-        const formData = new FormData()
-        Object.keys(data)
-            .map(key => {
-                if (key === 'files') {
-                    for (const file of data[key]) {
-                        formData.append(key, file, file.name)
-                    }
-                } else {
-                    formData.append(key, data[key])
-                }
+            .then(() => {
+                console.log("Succes");
             })
-        return formData
+            .catch(error => {
+                console.log("Error");
+            })
     }
-
-    fetch('/', {
-        method: 'POST',
-        body: encode({
-            'form-name': '.project__form',
-            ...this.state,
-            userId: netlifyIdentity.currentUser().id
-        }),
-    })
-    */
+    const emailForm = document.querySelector('.project__form')
+    if (emailForm) {
+        emailForm.addEventListener('submit', e => {
+            e.preventDefault();
+            processForm(emailForm);
+        })
+    }
 });
