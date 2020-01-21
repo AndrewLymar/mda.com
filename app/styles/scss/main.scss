@@ -88,6 +88,10 @@ section.section {
         font-weight: 300;
         color: #fff;
     }
+
+    a {
+        text-decoration: none;
+    }
 }
 
 .menu__logo {
@@ -240,7 +244,6 @@ section.section {
     //background: #000;
     background: #0F1113;
 }
-
 
 .banner {
     &__video-wrapper {

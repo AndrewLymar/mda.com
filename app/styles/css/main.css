@@ -571,6 +571,8 @@ section.section__title {
     font-size: 30px;
     font-weight: 300;
     color: #fff; }
+  .logo a {
+    text-decoration: none; }
 
 .menu__logo {
   margin-right: 25px; }

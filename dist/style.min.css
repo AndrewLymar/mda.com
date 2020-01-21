@@ -1311,6 +1311,10 @@ section.section__title {
   color: #fff;
 }
 
+.logo a {
+  text-decoration: none;
+}
+
 .menu__logo {
   margin-right: 25px;
 }
