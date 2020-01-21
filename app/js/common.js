@@ -125,11 +125,15 @@ $(function () {
 
             fetch('your-upload-url', options);
             */
-    /*
+
     let testForm = document.querySelector(".project__form");
 
     testForm.addEventListener('submit', e => {
         e.preventDefault();
+        const fileInput = document.querySelector('.attach');
+        const formData = new FormData();
+
+        formData.append('file', fileInput.files[0]);
 
         function encode(data) {
             const formData = new FormData();
@@ -154,19 +158,24 @@ $(function () {
                     'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
                     'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
                 },
-                body: new URLSearchParams(data).toString()
+                body: new URLSearchParams(formData).toString()
             })
-            .then(response => {
-                setTimeout(function () {
-                    $(".success").text("Мы получили ваш запрос и свяжемся с вами в ближайшее время");
-                }, 1000);
+            /*
+                .then(response => {
+                    setTimeout(function () {
+                        $(".success").text("Мы получили ваш запрос и свяжемся с вами в ближайшее время");
+                    }, 1000);
 
-                setTimeout(function () {
-                    $(".success ").fadeOut();
-                }, 4000);
-            });
+                    setTimeout(function () {
+                        $(".success ").fadeOut();
+                    }, 4000);
+                });
+                */
+            .then(response => alert('Сообщение отправлено'))
+            .catch(error => console.error(error))
     });
-    */
+
+    /*
     function encode(data) {
         const formData = new FormData();
 
@@ -193,7 +202,7 @@ $(function () {
                     'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
                     'Content-Type': 'application/x-www-form-urlencoded' // отправляемые данные 
                 },
-                body: encode(data)
+                body: new URLSearchParams(data).toString()
             })
             .then(response => alert('Сообщение отправлено'))
             .catch(error => console.error(error))
@@ -204,4 +213,30 @@ $(function () {
         ajaxSend(formData);
         this.reset(); // очищаем поля формы 
     });
+
+    /*
+    const encode = (data) => {
+        const formData = new FormData()
+        Object.keys(data)
+            .map(key => {
+                if (key === 'files') {
+                    for (const file of data[key]) {
+                        formData.append(key, file, file.name)
+                    }
+                } else {
+                    formData.append(key, data[key])
+                }
+            })
+        return formData
+    }
+
+    fetch('/', {
+        method: 'POST',
+        body: encode({
+            'form-name': '.project__form',
+            ...this.state,
+            userId: netlifyIdentity.currentUser().id
+        }),
+    })
+    */
 });
