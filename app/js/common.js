@@ -271,7 +271,7 @@ $(function () {
     testForm.addEventListener('submit', e => {
         e.preventDefault();
 
-        encode(data) {
+        function encode(data) {
             const formData = new FormData();
 
             for (const key of Object.keys(data)) {
