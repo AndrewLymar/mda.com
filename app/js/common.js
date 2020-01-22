@@ -272,7 +272,7 @@ $(function () {
         e.preventDefault();
 
         function encode(data) {
-            const formData = new FormData();
+            const formData = new FormData(data);
 
             for (const key of Object.keys(data)) {
                 if (key === 'repairs_files') {
@@ -288,7 +288,7 @@ $(function () {
             }
             return formData;
         }
-        let data = encode(testForm);
+        let fData = encode(testForm);
 
         fetch(testForm.getAttribute('action'), {
                 method: 'POST',
@@ -296,7 +296,7 @@ $(function () {
                     'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
                     'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
                 },
-                body: new URLSearchParams(data).toString()
+                body: new URLSearchParams(fData).toString()
             })
             .then(() => {
                 console.log("Succes");
