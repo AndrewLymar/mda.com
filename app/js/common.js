@@ -271,21 +271,13 @@ $(function () {
     testForm.addEventListener('submit', e => {
         e.preventDefault();
 
-        function encode(data) {
-            const formData = new FormData(data);
+        encode(data) {
+            const formData = new FormData();
 
             for (const key of Object.keys(data)) {
-                if (key === 'repairs_files') {
-                    const files = Object.entries(data[key]);
-                    let filesArr = [];
-                    files.map(file => {
-                        return filesArr.push(file[1]);
-                    })
-                    formData.append(key, filesArr);
-                } else {
-                    formData.append(key, data[key]);
-                }
+                formData.append(key, data[key]);
             }
+
             return formData;
         }
         let fData = encode(testForm);
