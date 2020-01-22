@@ -265,7 +265,7 @@ $(function () {
         })
     }
     */
-    /*
+
     let testForm = document.querySelector(".project__form");
 
     testForm.addEventListener('submit', e => {
@@ -288,7 +288,7 @@ $(function () {
                 console.log("Error");
             })
     });
-    */
+
     /*
     let testForm = document.querySelector(".project__form");
     testForm.addEventListener('submit', e => {
@@ -314,6 +314,7 @@ $(function () {
             });
     });
     */
+    /*
     $(".project__form").submit(function (e) {
         e.preventDefault();
         var $form = $(this);
@@ -329,5 +330,5 @@ $(function () {
             }, 4000);
         });
     });
-
+*/
 });
