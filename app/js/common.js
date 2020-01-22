@@ -270,16 +270,33 @@ $(function () {
 
     testForm.addEventListener('submit', e => {
         e.preventDefault();
-        const formData = new FormData(testForm);
-        const fileInput = document.querySelector('.attach');
-        formData.append('file', fileInput.files[0]);
+
+        function encode(data) {
+            const formData = new FormData();
+
+            for (const key of Object.keys(data)) {
+                if (key === 'repairs_files') {
+                    const files = Object.entries(data[key]);
+                    let filesArr = [];
+                    files.map(file => {
+                        return filesArr.push(file[1]);
+                    })
+                    formData.append(key, filesArr);
+                } else {
+                    formData.append(key, data[key]);
+                }
+            }
+            return formData;
+        }
+        let data = encode(testForm);
+
         fetch(testForm.getAttribute('action'), {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
                     'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
                 },
-                body: new URLSearchParams(formData).toString()
+                body: new URLSearchParams(data).toString()
             })
             .then(() => {
                 console.log("Succes");
