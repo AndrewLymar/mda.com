@@ -122,7 +122,7 @@ $(function () {
         $(".success").fadeIn(0);
         $.post(
             $form.attr("action"), $form.serialize()).then(function () {
-            $form.reset();
+            $form.trigger('reset');
             setTimeout(function () {
                 $(".success").text("Мы получили Ваш запрос и свяжемся с Вами в ближайшее время");
             }, 1000);
