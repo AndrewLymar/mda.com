@@ -153,6 +153,6 @@ gulp.task('watch', function (done) {
     done();
 });
 
-gulp.task('build', gulp.series('removedist', 'sass', 'css', 'js', 'svg', 'move'));
+gulp.task('build', gulp.series('removedist', 'sass', 'css', 'js', 'svg', 'imagemin', 'move'));
 
 gulp.task('default', gulp.series('sass', 'css', 'js', 'watch'));
