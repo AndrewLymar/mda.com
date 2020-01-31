@@ -51,16 +51,17 @@
         <div class="banner">
             <div class="banner__video-wrapper flex-row centered">
                 <iframe src="https://player.vimeo.com/video/386926501?background=1&autoplay=1&loop=1&byline=0&title=0&quality=2k" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <!--<iframe src="https://player.vimeo.com/video/386926501?background=1&autoplay=1&loop=1&byline=0&title=0&quality=2k" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
             </div>
         </div>
     </heder>
     <section class="videos section" id="portfolio">
-        <div class="vi-lazyload" data-id="111598383" data-thumb="0" data-logo="0"></div>
         <div class="vi-lazyload" data-id="384485640" data-thumb="3" data-logo="0"></div>
-        <div class="vi-lazyload" data-id="61249855" data-thumb="3" data-logo="0"></div>
-        <div class="vi-lazyload" data-id="72978544" data-thumb="3" data-logo="0"></div>
+        <div class="vi-lazyload" data-id="388460505" data-thumb="0" data-logo="0"></div>
+        <div class="vi-lazyload" data-id="388455772" data-thumb="3" data-logo="0"></div>
+        <!--<div class="vi-lazyload" data-id="72978544" data-thumb="3" data-logo="0"></div>
         <div class="vi-lazyload" data-id="54275813" data-thumb="3" data-logo="0"></div>
-        <div class="vi-lazyload" data-id="72420929" data-thumb="3" data-logo="0"></div>
+        <div class="vi-lazyload" data-id="72420929" data-thumb="3" data-logo="0"></div>-->
     </section>
     <section class="about section" id="about">
         <div class="container">
@@ -75,7 +76,6 @@
         <div class="container flex-row jc-center col-10 col-12-sm">
             <h3 class="section__title steps__title ta-center">Этапы работы</h3>
             <div class="steps__description ta-center">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate vel, rerum! Velit magnam suscipit fuga. Cumque aspernatur, quaerat fugit nihil repudiandae nobis rem aut, dignissimos voluptatibus harum minus unde! Corporis!
             </div>
             <div>
                 <div class="step">
@@ -101,7 +101,7 @@
                         <div class="step__number">3</div>
                         <div class="step__text flex-col">
                             <div class="step__title">Сценарий</div>
-                            <div class="step__description">После заключения договора по предоставленной информации мы составляем 3 сценария, подбираем голос для озвучки и предоставляем Вам выбор. </div>
+                            <div class="step__description">После заключения договора по предоставленной информации мы составляем сценарий, заверяем его с Вами, подбираем голоса для озвучки и начинаем работу</div>
                         </div>
                     </div>
                 </div>
@@ -171,9 +171,9 @@
                 </div>
                 <div class="flex-row jc-between">
                     <button type="submit" class="button project__button project__button-send col-12-sm ta-center">Отправить</button>
-                    <div class="button project__button project__button-prev col-12-sm ta-center">Prev</div>
+                    <!--<div class="button project__button project__button-prev col-12-sm ta-center">Prev</div>
                     <div class="button project__button project__button-more as-end col-12-sm ta-center">Подробности проекта</div>
-                    <div class="button project__button project__button-next col-12-sm ta-center">Next</div>
+                    <div class="button project__button project__button-next col-12-sm ta-center">Next</div>-->
                 </div>
                 <div class="error-message">Заполните все основные поля перед дополнительными!</div>
                 <p class="success">Ваш запрос обрабатывается...</p>
@@ -182,12 +182,12 @@
             <div class="flex-row jc-center">
                 <div class="project__phone flex-row ai-center"> <svg width="19" height="44" fill="#e6e6e6" class="attach-img">
                         <use xlink:href="img/sprite.svg#call"></use>
-                    </svg><span>+380 (96) 857 06 05</span></div>
+                    </svg><span>
+                        <a href="tel:+38096850605">+380 (96) 857 06 05</a></span></div>
                 <div class="project__email flex-row ai-center"><svg width="19" height="44" fill="#e6e6e6" class="attach-img">
                         <use xlink:href="img/sprite.svg#email"></use>
-                    </svg><span>studio@madvision.tv</span></div>
+                    </svg><span><a href="mailto:studio@madvision.tv">studio@madvision.tv</a></span></div>
             </div>
-
         </div>
     </section>
     <footer class="footer gap" id="contacts">
@@ -195,8 +195,10 @@
             <div class="contacts flex-col as-center jc-center ta-center">
                 <h3 class="contacts__title">Контакты</h3>
                 <div class="contacts__email">
-                    studio@madvision.tv</div>
-                <div class="contacts__telephone">+380 (96) 857 06 05</div>
+                    <a href="mailto:studio@madvision.tv">studio@madvision.tv</a></div>
+                <div class="contacts__telephone">
+                    <a href="tel:+38096850605">+380 (96) 857 06 05</a>
+                </div>
             </div>
             <div class="footer__block flex-col ai-center">
                 <div class="logo footer__logo flex-row ai-center jc-center">
@@ -222,7 +224,7 @@
                 <h3 class="address__title">
                     Расположение
                 </h3>
-                <div class="address__text">ул. Улица <br>
+                <div class="address__text">ул. Сичеславская 39<br>
                     г. Днепр
                 </div>
             </div>

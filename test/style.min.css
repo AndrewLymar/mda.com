@@ -1721,6 +1721,11 @@ section.section__title {
   color: #e6e6e6;
 }
 
+.project__email a,
+.project__phone a {
+  text-decoration: none;
+}
+
 .project__form {
   margin-top: 50px;
   width: 522px;
@@ -1991,6 +1996,10 @@ section.section__title {
 .contacts__email,
 .contacts__telephone {
   margin-top: 30px;
+}
+
+.contacts a {
+  text-decoration: none;
 }
 
 .copy {

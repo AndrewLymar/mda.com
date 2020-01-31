@@ -867,6 +867,8 @@ section.section__title {
     margin-right: 20px;
     font-size: 22px;
     color: #E6E6E6; }
+    .project__phone a, .project__email a {
+      text-decoration: none; }
   .project__form {
     margin-top: 50px;
     width: 522px; }
@@ -1010,6 +1012,9 @@ section.section__title {
 
 .contacts__email, .contacts__telephone {
   margin-top: 30px; }
+
+.contacts a {
+  text-decoration: none; }
 
 .copy {
   margin-top: 25px;

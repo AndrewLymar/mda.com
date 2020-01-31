@@ -523,6 +523,9 @@ section.videos {
         font-size: 22px;
         color: #E6E6E6;
 
+        a {
+            text-decoration: none;
+        }
     }
 
     &__form {
@@ -686,8 +689,6 @@ section.videos {
         font-size: 20px;
         color: $second-color;
     }
-
-
 }
 
 .footer {
@@ -735,11 +736,6 @@ section.videos {
 }
 
 .contacts {
-
-    @media only screen and (max-width: $sm) {
-        //margin-top: 25px;
-    }
-
     &__title {
         font-size: 18px;
         text-transform: uppercase;
@@ -752,6 +748,10 @@ section.videos {
     &__email,
     &__telephone {
         margin-top: 30px;
+    }
+
+    a {
+        text-decoration: none;
     }
 }
 
