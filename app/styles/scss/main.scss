@@ -132,8 +132,6 @@ section.section {
     }
 }
 
-
-
 .menu {
     position: fixed;
     width: 100%;
@@ -530,16 +528,75 @@ section.videos {
 
     &__form {
         margin-top: 50px;
-        width: 522px;
+        //width: 522px;
 
         @media only screen and (max-width: $md) {
             width: 90%;
         }
 
+        .tab-1,
         .tab-2,
         .tab-3,
-        .tab-4 {
+        .tab-4,
+        .tab-5,
+        .tab-6,
+        .tab-7,
+        .tab-8 {
+            width: 522px;
+
+            @media only screen and (max-width: $sm) {
+                width: 100%;
+            }
+        }
+
+        .tab-9,
+        .tab-10,
+        .tab-11,
+        .tab-12,
+        .tab-13 {
+            width: 600px;
+
+            @media only screen and (max-width: $sm) {
+                width: 100%;
+            }
+        }
+
+        .tab-2,
+        .tab-3,
+        .tab-4,
+        .tab-5,
+        .tab-6,
+        .tab-7,
+        .tab-8,
+        .tab-9,
+        .tab-10,
+        .tab-11,
+        .tab-12,
+        .tab-13,
+        .tab-14,
+        .tab-15 {
             display: none;
+        }
+
+        .tab-dop {
+            .project__inner {
+                margin-top: 55px;
+            }
+
+        }
+
+        label {
+            width: 100% !important;
+            font-size: 20px;
+            color: #fff;
+        }
+    }
+
+    .tab-10 {
+        @media only screen and (max-width: $sm) {
+            label {
+                font-size: 14px;
+            }
         }
     }
 
@@ -576,8 +633,55 @@ section.videos {
         }
     }
 
+    .radio-title {
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .radio-cont {
+        input {
+            margin-top: 0;
+            margin-right: 10px;
+        }
+
+        label {
+            margin-top: 28px;
+            width: auto !important;
+            font-size: 15px;
+
+
+        }
+    }
+
+    .long-radio {
+        position: relative;
+
+        @media only screen and (max-width: $sm) {
+            input {
+                position: absolute;
+                top: 43%;
+            }
+
+            label {
+                margin-left: 35px;
+            }
+        }
+    }
+
+
     &__input--long {
         width: 100%;
+    }
+
+    &__textarea {
+        margin-top: 50px;
+        border: 1px solid #fff;
+        background: #0F1113;
+        color: #fff;
+
+        @media only screen and (max-width: $sm) {
+            margin-top: 100px;
+        }
     }
 
     &__attach-container {

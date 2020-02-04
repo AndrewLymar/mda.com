@@ -870,15 +870,66 @@ section.section__title {
     .project__phone a, .project__email a {
       text-decoration: none; }
   .project__form {
-    margin-top: 50px;
-    width: 522px; }
+    margin-top: 50px; }
     @media only screen and (max-width: 768px) {
       .project__form {
         width: 90%; } }
+    .project__form .tab-1,
     .project__form .tab-2,
     .project__form .tab-3,
-    .project__form .tab-4 {
+    .project__form .tab-4,
+    .project__form .tab-5,
+    .project__form .tab-6,
+    .project__form .tab-7,
+    .project__form .tab-8 {
+      width: 522px; }
+      @media only screen and (max-width: 480px) {
+        .project__form .tab-1,
+        .project__form .tab-2,
+        .project__form .tab-3,
+        .project__form .tab-4,
+        .project__form .tab-5,
+        .project__form .tab-6,
+        .project__form .tab-7,
+        .project__form .tab-8 {
+          width: 100%; } }
+    .project__form .tab-9,
+    .project__form .tab-10,
+    .project__form .tab-11,
+    .project__form .tab-12,
+    .project__form .tab-13 {
+      width: 600px; }
+      @media only screen and (max-width: 480px) {
+        .project__form .tab-9,
+        .project__form .tab-10,
+        .project__form .tab-11,
+        .project__form .tab-12,
+        .project__form .tab-13 {
+          width: 100%; } }
+    .project__form .tab-2,
+    .project__form .tab-3,
+    .project__form .tab-4,
+    .project__form .tab-5,
+    .project__form .tab-6,
+    .project__form .tab-7,
+    .project__form .tab-8,
+    .project__form .tab-9,
+    .project__form .tab-10,
+    .project__form .tab-11,
+    .project__form .tab-12,
+    .project__form .tab-13,
+    .project__form .tab-14,
+    .project__form .tab-15 {
       display: none; }
+    .project__form .tab-dop .project__inner {
+      margin-top: 55px; }
+    .project__form label {
+      width: 100% !important;
+      font-size: 20px;
+      color: #fff; }
+  @media only screen and (max-width: 480px) {
+    .project .tab-10 label {
+      font-size: 14px; } }
   .project__input {
     margin-top: 25px;
     padding-top: 5px;
@@ -903,8 +954,34 @@ section.section__title {
       color: #E6E6E6;
       opacity: 0;
       transition: opacity 0.4s ease; }
+  .project .radio-title {
+    font-size: 20px;
+    color: #fff; }
+  .project .radio-cont input {
+    margin-top: 0;
+    margin-right: 10px; }
+  .project .radio-cont label {
+    margin-top: 28px;
+    width: auto !important;
+    font-size: 15px; }
+  .project .long-radio {
+    position: relative; }
+    @media only screen and (max-width: 480px) {
+      .project .long-radio input {
+        position: absolute;
+        top: 43%; }
+      .project .long-radio label {
+        margin-left: 35px; } }
   .project__input--long {
     width: 100%; }
+  .project__textarea {
+    margin-top: 50px;
+    border: 1px solid #fff;
+    background: #0F1113;
+    color: #fff; }
+    @media only screen and (max-width: 480px) {
+      .project__textarea {
+        margin-top: 100px; } }
   .project__attach-container {
     margin-top: 50px; }
   .project__button {

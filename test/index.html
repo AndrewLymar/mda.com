@@ -12,13 +12,12 @@
 </head>
 
 <body>
-    <div id="hellopreloader">
+    <!--<div id="hellopreloader">
         <div id="hellopreloader_preload"> </div>
-    </div>
+    </div>-->
     <heder class="header" id="header">
         <nav class="menu">
             <div class="header__container menu-grid">
-
                 <div class="logo menu__logo flex-row ai-center ">
                     <svg width="32" height="44" fill="#fff" class="logo__img">
                         <use xlink:href="img/sprite.svg#logo"></use>
@@ -38,6 +37,7 @@
                             <div class="language flex-row flex-col-sm ai-center">
                                 <span class="language__current language__ru"> <a class="menu__link flex-row" href="#language-switcher">RU</a></span>
                                 <span class="language__ch language__en"><a class="menu__link flex-row" href="oleg-com/en/index.html">EN</a></span>
+                                <span class="language__ch language__en"><a class="menu__link flex-row" href="oleg-com/en/index.html">UK</a></span>
                                 <span class="language__switcher arrow-left flex-row ai-center"></span>
                             </div>
                         </div>
@@ -50,18 +50,15 @@
         </nav>
         <div class="banner">
             <div class="banner__video-wrapper flex-row centered">
+                <!--<iframe src="https://player.vimeo.com/video/388455772?background=1&autoplay=1&loop=1&byline=0&title=0&quality=2k" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
                 <iframe src="https://player.vimeo.com/video/386926501?background=1&autoplay=1&loop=1&byline=0&title=0&quality=2k" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                <!--<iframe src="https://player.vimeo.com/video/386926501?background=1&autoplay=1&loop=1&byline=0&title=0&quality=2k" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
             </div>
         </div>
     </heder>
     <section class="videos section" id="portfolio">
         <div class="vi-lazyload" data-id="384485640" data-thumb="3" data-logo="0"></div>
-        <div class="vi-lazyload" data-id="388460505" data-thumb="0" data-logo="0"></div>
+        <div class="vi-lazyload" data-id="388460505" data-thumb="3" data-logo="0"></div>
         <div class="vi-lazyload" data-id="388455772" data-thumb="3" data-logo="0"></div>
-        <!--<div class="vi-lazyload" data-id="72978544" data-thumb="3" data-logo="0"></div>
-        <div class="vi-lazyload" data-id="54275813" data-thumb="3" data-logo="0"></div>
-        <div class="vi-lazyload" data-id="72420929" data-thumb="3" data-logo="0"></div>-->
     </section>
     <section class="about section" id="about">
         <div class="container">
@@ -74,16 +71,19 @@
     </section>
     <section class="steps section">
         <div class="container flex-row jc-center col-10 col-12-sm">
-            <h3 class="section__title steps__title ta-center">Этапы работы</h3>
-            <div class="steps__description ta-center">
+            <div class="flex-col">
+                <h3 class="section__title steps__title ta-center">Этапы работы</h3>
+                <div class="steps__description ta-center">
+                    Пожалуйста, ознакомтесь с этапами нашей работы
+                </div>
             </div>
             <div>
                 <div class="step">
                     <div class="flex-row flex-col-sm ai-center-sm ta-center-sm no-wrap">
                         <div class="step__number">1</div>
                         <div class="step__text flex-col">
-                            <div class="step__title">Бриф</div>
-                            <div class="step__description">На нашем сайте Вы заполняете форму с вопросами о вашей компании / услуге, чётко расписывая поставленную задачу, прикрепляете референс файл или оставляете ссылку на материал. </div>
+                            <div class="step__title">Начало</div>
+                            <div class="step__description">Определение задачи, хронометража, обьема работы. Предоплата 50%.</div>
                         </div>
                     </div>
                 </div>
@@ -91,8 +91,8 @@
                     <div class="flex-row flex-col-sm ai-center-sm ta-center-sm  no-wrap">
                         <div class="step__number">2</div>
                         <div class="step__text flex-col">
-                            <div class="step__title">Договор</div>
-                            <div class="step__description">В скором времени мы связываемся с вами через удобный для вас мессенджер, через e-mail или по телефону для уточнения деталей. Согласовываем все пожелания, определяемся со сроками, составляем прайс лист, заключаем договор.</div>
+                            <div class="step__title">Сценарий</div>
+                            <div class="step__description">Создание и утверждение сценария для видеоролика.</div>
                         </div>
                     </div>
                 </div>
@@ -100,8 +100,8 @@
                     <div class="flex-row flex-col-sm ai-center-sm ta-center-sm  no-wrap">
                         <div class="step__number">3</div>
                         <div class="step__text flex-col">
-                            <div class="step__title">Сценарий</div>
-                            <div class="step__description">После заключения договора по предоставленной информации мы составляем сценарий, заверяем его с Вами, подбираем голоса для озвучки и начинаем работу</div>
+                            <div class="step__title">Озвучка</div>
+                            <div class="step__description">Запись профессиональной дикторской озвучки одним или двумя голосами на выбранном Вами языке.</div>
                         </div>
                     </div>
                 </div>
@@ -109,8 +109,8 @@
                     <div class="flex-row flex-col-sm ai-center-sm ta-center-sm  no-wrap">
                         <div class="step__number">4</div>
                         <div class="step__text flex-col">
-                            <div class="step__title">Процесс создания</div>
-                            <div class="step__description">Процесс создания ролика, включающий в себя: сториборд, запись голоса, дизайн, анимацию, саунд дизайн.</div>
+                            <div class="step__title">Анимация</div>
+                            <div class="step__description">Разработка анимации в выбранном Вами стиле.</div>
                         </div>
                     </div>
                 </div>
@@ -118,8 +118,17 @@
                     <div class="flex-row flex-col-sm ai-center-sm ta-center-sm  no-wrap">
                         <div class="step__number">5</div>
                         <div class="step__text flex-col">
-                            <div class="step__title">Сдача ролика</div>
-                            <div class="step__description">Высылаем Вам полностью готовый ролик и делаем правки если это необходимо.</div>
+                            <div class="step__title">Правки</div>
+                            <div class="step__description">Вносятся требуемые правки в видеоролик.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="flex-row flex-col-sm ai-center-sm ta-center-sm  no-wrap">
+                        <div class="step__number">6</div>
+                        <div class="step__text flex-col">
+                            <div class="step__title">Завершение</div>
+                            <div class="step__description">Сдача проекта заказчику.</div>
                         </div>
                     </div>
                 </div>
@@ -145,12 +154,30 @@
                         <input type="text" class="project__input col-5 col-12-sm" name="email" pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" placeholder="Email" required>
                     </div>
                 </div>
-                <div class="tab tab-2">
+                <div class="tab tab-2 tab-dop">
                     <div class="project__inner col">
-                        <input type="text" class="project__input project__input--long" name="description" placeholder="Подробное описание проекта">
+                        <label for="1">Ваш сайт или бизнес-ниша:</label>
+                        <input type="text" class="project__input project__input--long" name="your_site" placeholder="" id="1">
                     </div>
                     <div class="project__inner col">
-                        <!--
+                        <label for="2">Название продукта/услуги, которая будет рекламироваться в видео:</label>
+                        <input type="text" class="project__input project__input--long" name="name_product" placeholder="" id="2">
+                    </div>
+                    <div class="project__inner col">
+                        <label for="3">Ваша целевая аудитория:</label>
+                        <input type="text" class="project__input project__input--long" name="target_aud" placeholder="" id="3">
+                    </div>
+                    <div class="project__inner col">
+                        <label for="4">Какие проблемы решает ваш товар или услуга: </label>
+                        <input type="text" class="project__input project__input--long" name="problem_solv" placeholder="" id="4">
+                    </div>
+                    <div class="project__inner col">
+                        <label for="4">Ваш фирменный лозунг/слоган: </label>
+                        <input type="text" class="project__input project__input--long" name="problem_solv" placeholder="" id="4">
+                    </div>
+                    <!--
+                    <div class="project__inner col">
+                        
                         <div class="project__attach-container flex-row ai-center">
                             <div class="project__attach-text">All necessary documents related to the project (optional)</div>
                             <input type="file" name="attach" class="attach" id="attach">
@@ -160,20 +187,154 @@
                                 </svg>
                                 <span>Choose a file</span>
                             </label>
-                        </div>
-                        -->
+                        </div>   
                     </div>
+                    -->
                 </div>
                 <div class="tab tab-3">
+                    <div class="project__inner flex-col col-12">
+                        <label for="5" class="col-12">Дайте короткое описание своего продукта/услуги, в чем его суть:</label>
+                        <textarea rows="5" class="project__textarea" name="name_product" placeholder="" id="5"></textarea>
+                    </div>
+                </div>
+                <div class="tab tab-4">
+                    <div class="project__inner flex-col col-12">
+                        <label for="5" class="col-12">Назовите преимущества вашего продукта/услуги:</label>
+                        <textarea rows="5" class="project__textarea" name="perevagi" placeholder="" id="5"></textarea>
+                    </div>
+                </div>
+                <div class="tab tab-5">
+                    <div class="project__inner flex-col col-12">
+                        <label for="6" class="col-12">Что отличает вашу компанию от ей подобных (перечислите):</label>
+                        <textarea rows="5" class="project__textarea" name="features" placeholder="" id="6"></textarea>
+                    </div>
+                </div>
+                <div class="tab tab-6">
+                    <div class="project__inner flex-col col-12">
+                        <label for="6" class="col-12">Какая конечная цель видео? Какое целевое действие вы ожидаете от тех, кто посмотрел видео? </label>
+                        <textarea rows="5" class="project__textarea" name="target" placeholder="" id="6"></textarea>
+                    </div>
+                </div>
+                <div class="tab tab-7">
+                    <div class="project__inner flex-col col-12">
+                        <label for="7" class="col-12">Что необходимо сделать (последовательность действий), чтобы получить ваш товар или воспользоваться услугой?</label>
+                        <textarea rows="5" class="project__textarea" name="steps" placeholder="" id="7"></textarea>
+                    </div>
+                </div>
+                <div class="tab tab-8">
+                    <div class="project__inner flex-col col-12">
+                        <label for="9" class="col-12">Ваш фирменный лозунг/слоган:</label>
+                        <textarea rows="5" class="project__textarea" name="slogan" placeholder="" id="9"></textarea>
+                    </div>
+                </div>
+                <div class="tab tab-9">
+                    <div class="project__inner radio-cont col">
+                        <div class="radio-title">Где вы планируете использовать видеоролик?</div>
+                        <div class="flex-row ai-center">
+                            <input type="radio" class="" name="where" value="wheresite" id="12">
+                            <label for="12" class="col-12">На сайте</label>
+                        </div>
+                        <div class="flex-row ai-center">
+                            <input type="radio" class="" name="where" value="wheresoc" id="13">
+                            <label for="13" class="col-12">В соцсетях</label>
+                        </div>
+                        <div class="flex-row ai-center">
+                            <input type="radio" class="" name="where" value="wheresitesoc" id="13b">
+                            <label for="13b" class="col-12">Сайт + Соцсети</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab tab-10">
+                    <div class="project__inner radio-cont col">
+                        <div class="radio-title">Какой тип подачи ниформации Вы хотите видеть в ролике?</div>
+                        <div class="flex-row ai-center long-radio">
+                            <input type="radio" class="" name="where" value="wheresite" id="14">
+                            <label for="14" class="col-12">Презентационный. Рассказ про преимущества компании</label>
+                        </div>
+                        <div class="flex-row ai-center long-radio">
+                            <input type="radio" class="" name="where" value="wheresoc" id="15">
+                            <label for="15" class="col-12">Сторителлинг. Рассказ про персонажа, который решил свою проблему</label>
+                        </div>
+                        <div class="flex-row ai-center long-radio">
+                            <input type="radio" class="" name="where" value="wheresitesoc" id="16">
+                            <label for="16" class="col-12">Смешанный. Немного того, немного этого.</label>
+                        </div>
+                        <div class="flex-row ai-center long-radio">
+                            <input type="radio" class="" name="where" value="wheresitesoc" id="17">
+                            <label for="17" class="col-12">Другое</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab tab-11">
+                    <div class="project__inner radio-cont col">
+                        <div class="radio-title">Выберите дикторскую озвучку:</div>
+                        <div class="flex-row ai-center">
+                            <input type="radio" class="" name="sound" value="soundman" id="18">
+                            <label for="18" class="col-12">Мужская озвучка</label>
+                        </div>
+                        <div class="flex-row ai-center">
+                            <input type="radio" class="" name="sound" value="soundwoman" id="19">
+                            <label for="19" class="col-12">Женская озвучка</label>
+                        </div>
+                        <div class="flex-row ai-center">
+                            <input type="radio" class="" name="sound" value="soundwomandouble" id="20">
+                            <label for="20" class="col-12">Два голоса (женский + мужской) </label>
+                        </div>
+                        <div class="flex-row ai-center">
+                            <input type="radio" class="" name="sound" value="soundnone" id="21">
+                            <label for="21" class="col-12">Озвучка не нужна</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab tab-12">
+                    <div class="project__inner radio-cont col">
+                        <div class="radio-title">Язык озвучки:</div>
+                        <div class="flex-row ai-center">
+                            <input type="radio" class="" name="lang" value="langrus" id="22">
+                            <label for="22" class="col-12">Русский язык</label>
+                        </div>
+                        <div class="flex-row ai-center">
+                            <input type="radio" class="" name="lang" value="languk" id="23">
+                            <label for="23" class="col-12">Украинский язык</label>
+                        </div>
+                        <div class="flex-row ai-center">
+                            <input type="radio" class="" name="lang" value="langen" id="24">
+                            <label for="24" class="col-12">Иностранный язык</label>
+                        </div>
+                        <div class="flex-row ai-center">
+                            <input type="radio" class="" name="lang" value="langnone" id="25">
+                            <label for="25" class="col-12">Озвучка не нужна</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab tab-13">
+                    <div class="project__inner radio-cont col">
+                        <div class="radio-title">Хотите юмора в ролике?</div>
+                        <div class="flex-row ai-center long-radio">
+                            <input type="radio" class="" name="joke" value="jokelittle" id="26">
+                            <label for="26" class="col-12">Да, можно немного пошутить</label>
+                        </div>
+                        <div class="flex-row ai-center long-radio">
+                            <input type="radio" class="" name="joke" value="jokemore" id="27">
+                            <label for="27" class="col-12">Весь ролик должен быть юмористическим</label>
+                        </div>
+                        <div class="flex-row ai-center long-radio">
+                            <input type="radio" class="" name="joke" value="jokenone" id="28">
+                            <label for="28" class="col-12">Нет, никакого юмора, ролик должен быть серьезным.</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab tab-14">
                     <div class="project__inner col">
-                        <input type="date" class="project__input project__input--long" name="date" placeholder="Ваш deadline">
+                        <label for="29" class="col-12">Ваш дедлайн</label>
+                        <input type="date" class="project__input project__input--long" name="date" placeholder="Ваш deadline" id="29">
                     </div>
                 </div>
                 <div class="flex-row jc-between">
                     <button type="submit" class="button project__button project__button-send col-12-sm ta-center">Отправить</button>
-                    <!--<div class="button project__button project__button-prev col-12-sm ta-center">Prev</div>
+                    <div class="button project__button project__button-prev col-12-sm ta-center">Назад</div>
                     <div class="button project__button project__button-more as-end col-12-sm ta-center">Подробности проекта</div>
-                    <div class="button project__button project__button-next col-12-sm ta-center">Next</div>-->
+                    <div class="button project__button project__button-next col-12-sm ta-center">Далее</div>
                 </div>
                 <div class="error-message">Заполните все основные поля перед дополнительными!</div>
                 <p class="success">Ваш запрос обрабатывается...</p>

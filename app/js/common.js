@@ -55,74 +55,172 @@ $(function () {
     });
 
     $projectForm = document.getElementsByClassName("project__form");
-    /*
-        $buttonNext = $(".project__button-next");
-        $buttonPrev = $(".project__button-prev");
-        $buttonMore = $(".project__button-more");
-        $buttonSend = $(".project__button-send");
+    $buttonNext = $(".project__button-next");
+    $buttonPrev = $(".project__button-prev");
+    $buttonMore = $(".project__button-more");
+    $buttonSend = $(".project__button-send");
 
-        var currentTabNum = 1;
+    var currentTabNum = 1;
 
-        $tab1 = $(".tab-1");
-        $tab2 = $(".tab-2");
-        $tab3 = $(".tab-3");
+    $tab1 = $(".tab-1");
+    $tab2 = $(".tab-2");
+    $tab3 = $(".tab-3");
+    $tab4 = $(".tab-4");
+    $tab5 = $(".tab-5");
+    $tab6 = $(".tab-6");
+    $tab7 = $(".tab-7");
+    $tab8 = $(".tab-8");
+    $tab9 = $(".tab-9");
+    $tab10 = $(".tab-10");
+    $tab11 = $(".tab-11");
+    $tab12 = $(".tab-12");
+    $tab13 = $(".tab-13");
+    $tab14 = $(".tab-14");
+    $tab15 = $(".tab-15");
 
-        $buttonMore.on("click", showNext);
-        $buttonNext.on("click", showNext);
-        $buttonPrev.on("click", showPrev);
+    $buttonMore.on("click", showNext);
+    $buttonNext.on("click", showNext);
+    $buttonPrev.on("click", showPrev);
 
-        function showNext() {
-            if ($projectForm[0].checkValidity()) {
-                $buttonPrev.show(300);
-                switch (currentTabNum) {
-                    case 1:
-                        $tab1.hide(300);
-                        $tab2.show(300);
-                        $buttonPrev.show(300);
-                        $buttonNext.show(300);
-                        $buttonSend.hide(300);
-                        $buttonMore.hide(300);
-                        break;
-                    case 2:
-                        $tab2.hide(300);
-                        $tab3.show(300);
-                        $buttonNext.hide(300);
-                        $buttonSend.show(300);
-                        $buttonSend.css("order", 3);
-                        break;
-                }
-                currentTabNum++;
-            } else {
-                $errorMessage = $(".error-message");
-                $errorMessage.show(300);
-                setTimeout(function () {
-                    $errorMessage.hide(300);
-                }, 3000);
-            }
-        }
-
-        function showPrev() {
+    function showNext() {
+        if ( /*$projectForm[0].checkValidity()*/ true) {
+            $buttonPrev.show(300);
             switch (currentTabNum) {
-                case 3:
-                    $tab3.hide(300);
+                case 1:
+                    $tab1.hide(300);
                     $tab2.show(300);
+                    $buttonPrev.show(300);
                     $buttonNext.show(300);
                     $buttonSend.hide(300);
+                    $buttonMore.hide(300);
                     break;
                 case 2:
                     $tab2.hide(300);
-                    $tab1.show(300);
-                    $buttonPrev.hide(300);
-                    $buttonMore.show(300);
+                    $tab3.show(300);
+                    break;
+                case 3:
+                    $tab3.hide(300);
+                    $tab4.show(300);
+                    break;
+                case 4:
+                    $tab4.hide(300);
+                    $tab5.show(300);
+                    break;
+                case 5:
+                    $tab5.hide(300);
+                    $tab6.show(300);
+                    break;
+                case 6:
+                    $tab6.hide(300);
+                    $tab7.show(300);
+                    break;
+                case 7:
+                    $tab7.hide(300);
+                    $tab8.show(300);
+                    break;
+                case 8:
+                    $tab8.hide(300);
+                    $tab9.show(300);
+                    break;
+                case 9:
+                    $tab9.hide(300);
+                    $tab10.show(300);
+                    break;
+                case 10:
+                    $tab10.hide(300);
+                    $tab11.show(300);
+                    break;
+                case 11:
+                    $tab11.hide(300);
+                    $tab12.show(300);
+                    break;
+                case 12:
+                    $tab12.hide(300);
+                    $tab13.show(300);
+                    break;
+                case 13:
+                    $tab13.hide(300);
+                    $tab14.show(300);
                     $buttonNext.hide(300);
                     $buttonSend.show(300);
-                    $buttonMore.css("order", 3);
-                    $buttonSend.css("order", 1);
+                    $buttonSend.css("order", 3);
                     break;
             }
-            currentTabNum--;
+            currentTabNum++;
+        } else {
+            $errorMessage = $(".error-message");
+            $errorMessage.show(300);
+            setTimeout(function () {
+                $errorMessage.hide(300);
+            }, 3000);
         }
-    */
+    }
+
+    function showPrev() {
+        switch (currentTabNum) {
+            case 14:
+                $tab14.hide(300);
+                $tab13.show(300);
+                $buttonNext.show(300);
+                $buttonSend.hide(300);
+                break;
+            case 13:
+                $tab13.hide(300);
+                $tab12.show(300);
+                break;
+            case 12:
+                $tab12.hide(300);
+                $tab11.show(300);
+                break;
+            case 11:
+                $tab11.hide(300);
+                $tab10.show(300);
+                break;
+            case 10:
+                $tab10.hide(300);
+                $tab9.show(300);
+                break;
+            case 9:
+                $tab9.hide(300);
+                $tab8.show(300);
+                break;
+            case 8:
+                $tab8.hide(300);
+                $tab7.show(300);
+                break;
+            case 7:
+                $tab7.hide(300);
+                $tab6.show(300);
+                break;
+            case 6:
+                $tab6.hide(300);
+                $tab5.show(300);
+                break;
+            case 5:
+                $tab5.hide(300);
+                $tab4.show(300);
+                break;
+            case 4:
+                $tab4.hide(300);
+                $tab3.show(300);
+                break;
+            case 3:
+                $tab3.hide(300);
+                $tab2.show(300);
+                break;
+            case 2:
+                $tab2.hide(300);
+                $tab1.show(300);
+                $buttonPrev.hide(300);
+                $buttonMore.show(300);
+                $buttonNext.hide(300);
+                $buttonSend.show(300);
+                $buttonMore.css("order", 3);
+                $buttonSend.css("order", 1);
+                break;
+        }
+        currentTabNum--;
+    }
     var currentLanguage = "ru";
     var $language = $(".language");
     var $languageSwitcher = $(".language__switcher");

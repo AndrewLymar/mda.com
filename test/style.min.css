@@ -1560,6 +1560,10 @@ section.section__title {
   .services__video {
     margin-top: 50px;
   }
+
+  .project__form {
+    width: 90%;
+  }
 }
 
 .videos {
@@ -1728,19 +1732,88 @@ section.section__title {
 
 .project__form {
   margin-top: 50px;
+}
+
+.project__form .tab-1,
+.project__form .tab-2,
+.project__form .tab-3,
+.project__form .tab-4,
+.project__form .tab-5,
+.project__form .tab-6,
+.project__form .tab-7,
+.project__form .tab-8 {
   width: 522px;
 }
 
-@media only screen and (max-width:768px) {
-  .project__form {
-    width: 90%;
+@media only screen and (max-width:480px) {
+  .project__form .tab-1,
+  .project__form .tab-2,
+  .project__form .tab-3,
+  .project__form .tab-4,
+  .project__form .tab-5,
+  .project__form .tab-6,
+  .project__form .tab-7,
+  .project__form .tab-8 {
+    width: 100%;
   }
 }
 
+.project__form .tab-10,
+.project__form .tab-11,
+.project__form .tab-12,
+.project__form .tab-13,
+.project__form .tab-9 {
+  width: 600px;
+}
+
+.project__form .tab-10,
+.project__form .tab-11,
+.project__form .tab-12,
+.project__form .tab-13,
+.project__form .tab-14,
+.project__form .tab-15,
 .project__form .tab-2,
 .project__form .tab-3,
-.project__form .tab-4 {
+.project__form .tab-4,
+.project__form .tab-5,
+.project__form .tab-6,
+.project__form .tab-7,
+.project__form .tab-8,
+.project__form .tab-9 {
   display: none;
+}
+
+.project__form .tab-dop .project__inner {
+  margin-top: 55px;
+}
+
+.project__form label {
+  width: 100%!important;
+  font-size: 20px;
+  color: #fff;
+}
+
+@media only screen and (max-width:480px) {
+  .project__form .tab-10,
+  .project__form .tab-11,
+  .project__form .tab-12,
+  .project__form .tab-13,
+  .project__form .tab-9 {
+    width: 100%;
+  }
+
+  .project .tab-10 label {
+    font-size: 14px;
+  }
+
+  .project .long-radio input {
+    position: absolute;
+    top: 43%;
+  }
+
+  .project .long-radio label {
+    margin-left: 35px;
+  }
 }
 
 .project__input {
@@ -1835,8 +1908,41 @@ section.section__title {
   transition: opacity .4s;
 }
 
+.project .radio-title {
+  font-size: 20px;
+  color: #fff;
+}
+
+.project .radio-cont input {
+  margin-top: 0;
+  margin-right: 10px;
+}
+
+.project .radio-cont label {
+  margin-top: 28px;
+  width: auto!important;
+  font-size: 15px;
+}
+
+.project .long-radio {
+  position: relative;
+}
+
 .project__input--long {
   width: 100%;
+}
+
+.project__textarea {
+  margin-top: 50px;
+  border: 1px solid #fff;
+  background: #0f1113;
+  color: #fff;
+}
+
+@media only screen and (max-width:480px) {
+  .project__textarea {
+    margin-top: 100px;
+  }
 }
 
 .project__attach-container {
