@@ -83,7 +83,7 @@ $(function () {
     $buttonPrev.on("click", showPrev);
 
     function showNext() {
-        if ( /*$projectForm[0].checkValidity()*/ true) {
+        if ($projectForm[0].checkValidity()) {
             $buttonPrev.show(300);
             switch (currentTabNum) {
                 case 1:

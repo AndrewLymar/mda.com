@@ -51,14 +51,14 @@
         <div class="banner">
             <div class="banner__video-wrapper flex-row centered">
                 <!--<iframe src="https://player.vimeo.com/video/388455772?background=1&autoplay=1&loop=1&byline=0&title=0&quality=2k" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
-                <iframe src="https://player.vimeo.com/video/386926501?background=1&autoplay=1&loop=1&byline=0&title=0&quality=2k" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <iframe src="https://player.vimeo.com/video/389490505?background=1&autoplay=1&loop=1&byline=0&title=0&quality=2k" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
         </div>
     </heder>
     <section class="videos section" id="portfolio">
         <div class="vi-lazyload" data-id="384485640" data-thumb="3" data-logo="0"></div>
         <div class="vi-lazyload" data-id="388460505" data-thumb="3" data-logo="0"></div>
-        <div class="vi-lazyload" data-id="388455772" data-thumb="3" data-logo="0"></div>
+        <div class="vi-lazyload" data-id="386926501" data-thumb="3" data-logo="0"></div>
     </section>
     <section class="about section" id="about">
         <div class="container">
@@ -139,7 +139,7 @@
         <div class="container flex-col ai-center">
             <h3 class="section__title project__title ta-center">Новый проект</h3>
             <div class="project__description ta-center-sm">
-                Начните новый проект, заполнив форму
+                Начните Ваш новый проект, заполнив форму
             </div>
             <form class="project__form" action="" method="POST" data-netlify="true" enctype="multipart/form-data">
                 <div class="tab tab-1">
@@ -168,10 +168,6 @@
                         <input type="text" class="project__input project__input--long" name="target_aud" placeholder="" id="3">
                     </div>
                     <div class="project__inner col">
-                        <label for="4">Какие проблемы решает ваш товар или услуга: </label>
-                        <input type="text" class="project__input project__input--long" name="problem_solv" placeholder="" id="4">
-                    </div>
-                    <div class="project__inner col">
                         <label for="4">Ваш фирменный лозунг/слоган: </label>
                         <input type="text" class="project__input project__input--long" name="problem_solv" placeholder="" id="4">
                     </div>
@@ -193,7 +189,7 @@
                 </div>
                 <div class="tab tab-3">
                     <div class="project__inner flex-col col-12">
-                        <label for="5" class="col-12">Дайте короткое описание своего продукта/услуги, в чем его суть:</label>
+                        <label for="5" class="col-12">Дайте краткое описание своего продукта/услуги, в чем его суть:</label>
                         <textarea rows="5" class="project__textarea" name="name_product" placeholder="" id="5"></textarea>
                     </div>
                 </div>
@@ -209,9 +205,9 @@
                         <textarea rows="5" class="project__textarea" name="features" placeholder="" id="6"></textarea>
                     </div>
                 </div>
-                <div class="tab tab-6">
+                <div class="tab tab-6 long-label">
                     <div class="project__inner flex-col col-12">
-                        <label for="6" class="col-12">Какая конечная цель видео? Какое целевое действие вы ожидаете от тех, кто посмотрел видео? </label>
+                        <label for="6" class="col-12">Какая конечная цель видео? Какое целевое действие вы ожидаете от тех, кто посмотрел видео? (зарегистрироваться, позвонить, кликнуть кнопку, связаться и т.д.)</label>
                         <textarea rows="5" class="project__textarea" name="target" placeholder="" id="6"></textarea>
                     </div>
                 </div>
@@ -221,10 +217,10 @@
                         <textarea rows="5" class="project__textarea" name="steps" placeholder="" id="7"></textarea>
                     </div>
                 </div>
-                <div class="tab tab-8">
+                <div class="tab tab-8 long-label">
                     <div class="project__inner flex-col col-12">
-                        <label for="9" class="col-12">Ваш фирменный лозунг/слоган:</label>
-                        <textarea rows="5" class="project__textarea" name="slogan" placeholder="" id="9"></textarea>
+                        <label for="9" class="col-12">Располагаете ли Вы какой-нибудь статистикой по товару? Какое количество клиентов воспользовались услугой/приобрели товар снова? Сколько всего продано товаров и/или оказано услуг?</label>
+                        <textarea rows="5" class="project__textarea" name="statistick" placeholder="" id="9"></textarea>
                     </div>
                 </div>
                 <div class="tab tab-9">
@@ -246,18 +242,14 @@
                 </div>
                 <div class="tab tab-10">
                     <div class="project__inner radio-cont col">
-                        <div class="radio-title">Какой тип подачи ниформации Вы хотите видеть в ролике?</div>
+                        <div class="radio-title">Какой тип подачи информации Вы хотели бы видеть в ролике?</div>
                         <div class="flex-row ai-center long-radio">
                             <input type="radio" class="" name="where" value="wheresite" id="14">
-                            <label for="14" class="col-12">Презентационный. Рассказ про преимущества компании</label>
+                            <label for="14" class="col-12">Презентационный. Рассказ о преимуществах компании</label>
                         </div>
                         <div class="flex-row ai-center long-radio">
                             <input type="radio" class="" name="where" value="wheresoc" id="15">
-                            <label for="15" class="col-12">Сторителлинг. Рассказ про персонажа, который решил свою проблему</label>
-                        </div>
-                        <div class="flex-row ai-center long-radio">
-                            <input type="radio" class="" name="where" value="wheresitesoc" id="16">
-                            <label for="16" class="col-12">Смешанный. Немного того, немного этого.</label>
+                            <label for="15" class="col-12">Сторителлинг. Рассказ о персонаже, который решил свою проблему</label>
                         </div>
                         <div class="flex-row ai-center long-radio">
                             <input type="radio" class="" name="where" value="wheresitesoc" id="17">
@@ -336,7 +328,7 @@
                     <div class="button project__button project__button-more as-end col-12-sm ta-center">Подробности проекта</div>
                     <div class="button project__button project__button-next col-12-sm ta-center">Далее</div>
                 </div>
-                <div class="error-message">Заполните все основные поля перед дополнительными!</div>
+                <div class="error-message">Заполните все основные поля в правильном формате!</div>
                 <p class="success">Ваш запрос обрабатывается...</p>
             </form>
             <div class="project__or ta-center-sm">Или можете позвонить / написать нам </div>

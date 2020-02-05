@@ -1562,7 +1562,7 @@ section.section__title {
   }
 
   .project__form {
-    width: 90%;
+    width: 100%;
   }
 }
 
@@ -1690,6 +1690,10 @@ section.section__title {
   .step__description {
     font-size: 16px;
   }
+
+  .project .tab-10 label {
+    font-size: 14px;
+  }
 }
 
 .project {
@@ -1745,7 +1749,7 @@ section.section__title {
   width: 522px;
 }
 
-@media only screen and (max-width:480px) {
+@media only screen and (max-width:768px) {
   .project__form .tab-1,
   .project__form .tab-2,
   .project__form .tab-3,
@@ -1764,6 +1768,16 @@ section.section__title {
 .project__form .tab-13,
 .project__form .tab-9 {
   width: 600px;
+}
+
+@media only screen and (max-width:768px) {
+  .project__form .tab-10,
+  .project__form .tab-11,
+  .project__form .tab-12,
+  .project__form .tab-13,
+  .project__form .tab-9 {
+    width: 100%;
+  }
 }
 
 .project__form .tab-10,
@@ -1791,29 +1805,6 @@ section.section__title {
   width: 100%!important;
   font-size: 20px;
   color: #fff;
-}
-
-@media only screen and (max-width:480px) {
-  .project__form .tab-10,
-  .project__form .tab-11,
-  .project__form .tab-12,
-  .project__form .tab-13,
-  .project__form .tab-9 {
-    width: 100%;
-  }
-
-  .project .tab-10 label {
-    font-size: 14px;
-  }
-
-  .project .long-radio input {
-    position: absolute;
-    top: 43%;
-  }
-
-  .project .long-radio label {
-    margin-left: 35px;
-  }
 }
 
 .project__input {
@@ -1908,6 +1899,10 @@ section.section__title {
   transition: opacity .4s;
 }
 
+.project .long-label label {
+  margin-bottom: 60px;
+}
+
 .project .radio-title {
   font-size: 20px;
   color: #fff;
@@ -1940,6 +1935,15 @@ section.section__title {
 }
 
 @media only screen and (max-width:480px) {
+  .project .long-radio input {
+    position: absolute;
+    top: 43%;
+  }
+
+  .project .long-radio label {
+    margin-left: 35px;
+  }
+
   .project__textarea {
     margin-top: 100px;
   }

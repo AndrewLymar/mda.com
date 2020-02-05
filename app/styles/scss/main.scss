@@ -531,7 +531,7 @@ section.videos {
         //width: 522px;
 
         @media only screen and (max-width: $md) {
-            width: 90%;
+            width: 100%;
         }
 
         .tab-1,
@@ -544,7 +544,7 @@ section.videos {
         .tab-8 {
             width: 522px;
 
-            @media only screen and (max-width: $sm) {
+            @media only screen and (max-width: $md) {
                 width: 100%;
             }
         }
@@ -556,7 +556,7 @@ section.videos {
         .tab-13 {
             width: 600px;
 
-            @media only screen and (max-width: $sm) {
+            @media only screen and (max-width: $md) {
                 width: 100%;
             }
         }
@@ -630,6 +630,12 @@ section.videos {
             color: #E6E6E6;
             opacity: 0;
             transition: opacity 0.4s ease;
+        }
+    }
+
+    .long-label {
+        label {
+            margin-bottom: 60px;
         }
     }
 

@@ -873,7 +873,7 @@ section.section__title {
     margin-top: 50px; }
     @media only screen and (max-width: 768px) {
       .project__form {
-        width: 90%; } }
+        width: 100%; } }
     .project__form .tab-1,
     .project__form .tab-2,
     .project__form .tab-3,
@@ -883,7 +883,7 @@ section.section__title {
     .project__form .tab-7,
     .project__form .tab-8 {
       width: 522px; }
-      @media only screen and (max-width: 480px) {
+      @media only screen and (max-width: 768px) {
         .project__form .tab-1,
         .project__form .tab-2,
         .project__form .tab-3,
@@ -899,7 +899,7 @@ section.section__title {
     .project__form .tab-12,
     .project__form .tab-13 {
       width: 600px; }
-      @media only screen and (max-width: 480px) {
+      @media only screen and (max-width: 768px) {
         .project__form .tab-9,
         .project__form .tab-10,
         .project__form .tab-11,
@@ -954,6 +954,8 @@ section.section__title {
       color: #E6E6E6;
       opacity: 0;
       transition: opacity 0.4s ease; }
+  .project .long-label label {
+    margin-bottom: 60px; }
   .project .radio-title {
     font-size: 20px;
     color: #fff; }
