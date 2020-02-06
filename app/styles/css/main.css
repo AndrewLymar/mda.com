@@ -951,6 +951,8 @@ section.section__title {
       color: #E6E6E6;
       opacity: 0;
       transition: opacity 0.4s ease; }
+  .project fieldset {
+    border: none; }
   .project .long-label label {
     margin-bottom: 60px; }
   .project .radio-title {
