@@ -639,7 +639,7 @@ section.videos {
 
     .long-label {
         label {
-            margin-bottom: 60px;
+            margin-bottom: 80px;
         }
     }
 
@@ -668,12 +668,12 @@ section.videos {
 
         @media only screen and (max-width: $sm) {
             input {
-                position: absolute;
-                top: 43%;
+                position: relative;
+                top: 3%;
             }
 
             label {
-                margin-left: 35px;
+                //margin-left: 35px;
             }
         }
     }

@@ -1900,7 +1900,7 @@ section.section__title {
 }
 
 .project .long-label label {
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 .project .radio-title {
@@ -1936,12 +1936,8 @@ section.section__title {
 
 @media only screen and (max-width:480px) {
   .project .long-radio input {
-    position: absolute;
-    top: 43%;
-  }
-
-  .project .long-radio label {
-    margin-left: 35px;
+    position: relative;
+    top: 3%;
   }
 
   .project__textarea {
