@@ -954,7 +954,7 @@ section.section__title {
   .project .long-label label {
     margin-bottom: 60px; }
   .project .radio-title {
-    font-size: 20px;
+    font-size: 20px !important;
     color: #fff; }
   .project .radio-cont input {
     margin-top: 0;
