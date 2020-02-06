@@ -1895,6 +1895,10 @@ section.section__title {
   transition: opacity .4s;
 }
 
+.project fieldset {
+  border: none;
+}
+
 .project .long-label label {
   margin-bottom: 60px;
 }
