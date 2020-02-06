@@ -718,9 +718,6 @@ section.section__title {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
-    @media only screen and (max-width: 768px) {
-      .banner__video-wrapper iframe {
-        left: 37%; } }
 
 .banner__text {
   display: none;

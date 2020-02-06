@@ -1553,10 +1553,6 @@ section.section__title {
 }
 
 @media only screen and (max-width:768px) {
-  .banner__video-wrapper iframe {
-    left: 37%;
-  }
-
   .services__video {
     margin-top: 50px;
   }
