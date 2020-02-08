@@ -2051,6 +2051,11 @@ section.section__title {
 }
 
 @media only screen and (max-width:480px) {
+  .project .error-message,
+  .project .success {
+    position: relative;
+  }
+
   .footer {
     padding-top: 50px;
     padding-bottom: 50px;

@@ -1044,6 +1044,10 @@ section.section__title {
     margin-top: 25px;
     font-size: 20px;
     color: #ff3; }
+    @media only screen and (max-width: 480px) {
+      .project .error-message,
+      .project .success {
+        position: relative; } }
 
 .footer {
   padding-top: 100px;
