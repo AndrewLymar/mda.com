@@ -2036,6 +2036,7 @@ section.section__title {
 .project .error-message,
 .project .success {
   display: none;
+  position: absolute;
   margin-top: 25px;
   font-size: 20px;
   color: #ff3;

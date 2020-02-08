@@ -1037,13 +1037,10 @@ section.section__title {
     opacity: 0; }
   .project .last-order {
     order: 3; }
-  .project .error-message {
-    display: none;
-    margin-top: 25px;
-    font-size: 20px;
-    color: #ff3; }
+  .project .error-message,
   .project .success {
     display: none;
+    position: absolute;
     margin-top: 25px;
     font-size: 20px;
     color: #ff3; }
