@@ -384,6 +384,10 @@ section.section {
     width: 400px;
     z-index: 999999 !important;
 
+    @media only screen and (max-width: $sm) {
+        width: 100%;
+    }
+
     .iziModal-wrap {
         display: flex;
         background: #fff;

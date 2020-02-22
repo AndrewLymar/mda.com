@@ -781,6 +781,9 @@ section.section__title {
 #modal {
   width: 400px;
   z-index: 999999 !important; }
+  @media only screen and (max-width: 480px) {
+    #modal {
+      width: 100%; } }
   #modal .iziModal-wrap {
     display: flex;
     background: #fff;

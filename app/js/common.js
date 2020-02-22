@@ -254,7 +254,7 @@ $(function () {
 
             setTimeout(function () {
                 $(".success-banner").fadeOut();
-            }, 4000);
+            }, 5000);
         });
     });
     $(".project__form").submit(function (e) {
@@ -288,7 +288,7 @@ $(function () {
 
             setTimeout(function () {
                 $(".success ").fadeOut();
-            }, 4000);
+            }, 5000);
         });
     });
 });
