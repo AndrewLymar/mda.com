@@ -528,6 +528,15 @@
 body {
   font-family: sans-serif; }
 
+.contact-element {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  color: #E6E6E6; }
+  .contact-element a {
+    text-decoration: none; }
+  .contact-element .attach-img {
+    margin-right: 15px; }
+
 .header__container {
   width: 100%;
   max-width: 1800px;
@@ -546,6 +555,25 @@ body {
 section.section__title {
   margin-bottom: 50px;
   font-size: 28px; }
+
+.error-message,
+.success,
+.success-banner {
+  display: none;
+  position: absolute;
+  margin-top: 25px;
+  font-size: 20px;
+  color: #ff3; }
+  @media only screen and (max-width: 480px) {
+    .error-message,
+    .success,
+    .success-banner {
+      position: relative; } }
+
+.success-banner {
+  position: relative;
+  font-size: 24px;
+  color: #0F1113; }
 
 .thumb-wrap {
   overflow: hidden;
@@ -682,31 +710,13 @@ section.section__title {
   background: #0F1113; }
 
 .banner__video-wrapper {
-  /*
-        .video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .overlay {
-            position: absolute;
-            z-index: 1;
-
-            p {
-                font-size: 32px;
-                color: #9f3;
-            }
-        }
-        */
   position: relative;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: -1;
-  pointer-events: none;
-  overflow: hidden; }
+  overflow: hidden;
+  padding-bottom: 50px; }
   .banner__video-wrapper iframe {
     width: 100vw;
     height: 56.25vw;
@@ -719,38 +729,98 @@ section.section__title {
     left: 50%;
     transform: translate(-50%, -50%); }
 
-.banner__text {
-  display: none;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  font-size: 58px;
-  color: #fff; }
-  @media only screen and (max-width: 992px) {
-    .banner__text {
-      font-size: 40px; } }
+.banner__contact-wrap {
+  margin-top: auto;
+  z-index: 10; }
 
-.banner__word {
-  margin-right: 55px;
-  font-family: 'Monoton', cursive;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  color: #fff; }
-  .banner__word:first-letter {
-    font-size: 58px;
-    color: #F398A9; }
-    @media only screen and (max-width: 992px) {
-      .banner__word:first-letter {
-        font-size: 48px; } }
-  .banner__word:last-child {
-    margin-right: 0; }
+.banner__email, .banner__phone {
+  margin-left: 20px;
+  margin-right: 20px; }
 
-.banner__word--first-word:first-letter {
-  color: #FFFF00; }
+.banner__phone {
+  font-size: 20px; }
 
-.banner__word--second-word:first-letter {
-  color: #B87EBB; }
+.banner__button {
+  min-width: 270px;
+  margin-top: 25px;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: #ff3;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #0F1113;
+  transition: all 0.6s ease;
+  cursor: pointer;
+  z-index: 99999999; }
+  .banner__button:hover {
+    background: none;
+    border: 1px solid #fff;
+    color: #fff; }
 
-.banner__word--last-word:first-letter {
-  color: #99FF33; }
+.banner__form {
+  margin-top: 30px; }
+  .banner__form label {
+    font-size: 22px; }
+  .banner__form input {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    border: 1px solid #0F1113;
+    border-radius: 5px;
+    padding: 10px;
+    color: #0F1113; }
+    .banner__form input::placeholder {
+      color: #0F1113; }
+    .banner__form input:focus {
+      border: 1px solid #0F1113; }
+  .banner__form button {
+    margin-top: 25px; }
+
+#modal {
+  width: 400px;
+  z-index: 999999 !important; }
+  #modal .iziModal-wrap {
+    display: flex;
+    background: #fff;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #0F1113; }
+    #modal .iziModal-wrap .iziModal-content {
+      padding: 40px 50px !important; }
+      #modal .iziModal-wrap .iziModal-content .modal-container {
+        margin-top: 10px; }
+      #modal .iziModal-wrap .iziModal-content h3 {
+        text-align: center;
+        font-size: 34px; }
+  #modal .modal-button {
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #ff3;
+    box-shadow: 0px 2px 14px -4px rgba(0, 0, 0, 0.75);
+    cursor: pointer; }
+
+button.icon-close {
+  background: none;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: 'Raleway', sans-serif; }
+  button.icon-close:before {
+    color: #0F1113;
+    content: "X"; }
 
 .services {
   background: #fff; }
@@ -803,6 +873,17 @@ section.section__title {
         font-size: 18px; } }
     .about__text span {
       color: #ff3; }
+
+.video-main {
+  margin-top: 100px; }
+  @media only screen and (max-width: 480px) {
+    .video-main {
+      margin-top: 30px; } }
+  .video-main .vi-lazyload-playbtn:hover {
+    background: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 8'%3E%3Crect fill='rgba(25,183,234, .65)' width='13' height='8' rx='1' ry='1'/%3E%3Cpolygon fill='%23fff' points='5 6 9 4 5 2'/%3E%3C/svg%3E");
+    background-position: 50%;
+    background-size: calc(35px + 10%) auto;
+    background-repeat: no-repeat; }
 
 .steps {
   padding-top: 100px;
@@ -861,11 +942,7 @@ section.section__title {
   .project__phone, .project__email {
     margin-top: 25px;
     margin-left: 20px;
-    margin-right: 20px;
-    font-size: 22px;
-    color: #E6E6E6; }
-    .project__phone a, .project__email a {
-      text-decoration: none; }
+    margin-right: 20px; }
   .project__form {
     margin-top: 50px; }
     @media only screen and (max-width: 768px) {
@@ -1017,8 +1094,6 @@ section.section__title {
     .project label span {
       position: relative;
       top: 17%; }
-  .project .attach-img {
-    margin-right: 15px; }
   .project .attach + label {
     background-color: none;
     font-size: 1.25em;
@@ -1037,17 +1112,6 @@ section.section__title {
     opacity: 0; }
   .project .last-order {
     order: 3; }
-  .project .error-message,
-  .project .success {
-    display: none;
-    position: absolute;
-    margin-top: 25px;
-    font-size: 20px;
-    color: #ff3; }
-    @media only screen and (max-width: 480px) {
-      .project .error-message,
-      .project .success {
-        position: relative; } }
 
 .footer {
   padding-top: 100px;
@@ -1105,4 +1169,5 @@ section.section__title {
   text-transform: uppercase; }
 
 .address__text {
+  max-width: 175px;
   margin-top: 30px; }

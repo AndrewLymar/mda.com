@@ -30,6 +30,7 @@ gulp.task('css', function () {
     return gulp.src([
         'app/styles/css/reset.css',
         'app/styles/css/vi-lazyload.min.css',
+        'app/styles/css/iziModal.min.css',
         'app/styles/css/main.css'
         ])
         .pipe(autoprefixer(['last 3 versions']))
@@ -45,6 +46,7 @@ gulp.task('js', function () {
         'app/js/jquery.min.js',
         'app/js/mobileMenu.js',
         'app/js/vi-lazyload.js',
+        'app/js/iziModal.min.js',
 		'app/js/common.js'
 		])
         .pipe(concat('scripts.min.js'))

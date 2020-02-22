@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title>madvision</title>
-    <meta name="description" content="">
+    <title>madvision - студия анимации и моушн-дизайна</title>
+    <meta name="description" content="Заказать видеоролик для вашего бизнесса">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
@@ -12,9 +12,9 @@
 </head>
 
 <body>
-    <div id="hellopreloader">
+    <!--<div id="hellopreloader">
         <div id="hellopreloader_preload"> </div>
-    </div>
+    </div>-->
     <heder class="header" id="header">
         <nav class="menu">
             <div class="header__container menu-grid">
@@ -27,12 +27,11 @@
                     </a>
                 </div>
                 <ul class="menu__right menu__list flex-row flex-col-md ai-center">
-                    <!--<li class="menu__item"><a class="menu__link mc" href="#header">Main</a></li>-->
                     <li class="menu__item"><a class="menu__link mc" href="#portfolio">Портфолио</a></li>
                     <li class="menu__item"><a class="menu__link mc" href="#about">О компании</a></li>
                     <li class="menu__item"><a class="menu__link mc" href="#project">Новый проект</a></li>
                     <li class="menu__item"><a class="menu__link mc" href="#contacts">Контакты</a></li>
-                    <li class="menu__item">
+                    <!--<li class="menu__item">
                         <div class="menu__link">
                             <div class="language flex-row flex-col-sm ai-center">
                                 <span class="language__current language__ru"> <a class="menu__link flex-row" href="#language-switcher">RU</a></span>
@@ -42,6 +41,7 @@
                             </div>
                         </div>
                     </li>
+                    -->
                 </ul>
                 <svg width="32" height="44" fill="#fff" class="menu-icon">
                     <use xlink:href="img/sprite.svg#menu"></use>
@@ -49,16 +49,42 @@
             </div>
         </nav>
         <div class="banner">
-            <div class="banner__video-wrapper flex-row centered">
-                <!--<iframe src="https://player.vimeo.com/video/388455772?background=1&autoplay=1&loop=1&byline=0&title=0&quality=2k" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
+            <div class="banner__video-wrapper flex-col centered">
                 <iframe src="https://player.vimeo.com/video/389490505?background=1&autoplay=1&loop=1&byline=0&title=0&quality=1080p" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <div class="banner__contact-wrap flex-col ai-center">
+                    <div class="flex-row ai-center jc-center">
+                        <div class="banner__phone contact-element flex-row ai-center"> <svg width="19" height="44" fill="#e6e6e6" class="attach-img">
+                                <use xlink:href="img/sprite.svg#call"></use>
+                            </svg><span>
+                                <a href="tel:+38096850605">+380 (96) 857 06 05</a></span></div>
+                        <div class="banner__email contact-element flex-row ai-center"><svg width="19" height="44" fill="#e6e6e6" class="attach-img">
+                                <use xlink:href="img/sprite.svg#email"></use>
+                            </svg><span><a href="mailto:studio@madvision.tv">studio@madvision.tv</a></span></div>
+                    </div>
+                    <button class="button banner__button">Бесплатная консультация</button>
+                </div>
+            </div>
+            <div id="modal">
+                <button data-izimodal-close="" class="icon-close flex-row centered"></button>
+                <h3>Оставьте ваши данные</h3>
+                <div class="modal-container">
+                    <form class="banner__form" action="" method="POST" data-netlify="true" enctype="multipart/form-data">
+                        <label for="banner_name">Имя<input type="text" class="project__input project__input--long" name="your_name" pattern="^[А-Яа-яЁёa-zA-ZА-ЯІЇЄҐа-яіїєґ\s]+$" id="banner_name" required></label>
+                        <label for="banner_phone">Телефон<input type="text" class="project__input col-5 col-12-sm" name="phone" pattern="^((8|0|\+\d{1,2})[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" id="banner_phone" required></label>
+                        <label for="banner_email">Email<input type="text" class="project__input col-5 col-12-sm" name="email" pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" id="banner_email" required></label>
+                        <div class="flex-row jc-center">
+                            <button type="submit" class="button modal-button col-12-sm ta-center">Оставить заявку</button>
+                        </div>
+                        <p class="success-banner">Ваш запрос обрабатывается...</p>
+                    </form>
+                </div>
             </div>
         </div>
     </heder>
     <section class="videos section" id="portfolio">
         <div class="vi-lazyload" data-id="384485640" data-thumb="3" data-logo="0"></div>
         <div class="vi-lazyload" data-id="388460505" data-thumb="3" data-logo="0"></div>
-        <div class="vi-lazyload" data-id="386926501" data-thumb="3" data-logo="0"></div>
+        <div class="vi-lazyload" data-id="390766588" data-thumb="3" data-logo="0"></div>
     </section>
     <section class="about section" id="about">
         <div class="container">
@@ -66,6 +92,9 @@
                 <p class="about__text ta-center">
                     <span>madvision</span> - креативная студия, ориентированная на анимацию и моушн-дизайн. Мы создаем уникальные анимационные видео для вашего бизнеса или развлечений.
                 </p>
+                <div class="video-main col-7 col-10-md col-12-sm">
+                    <div class="vi-lazyload" data-id="392823188" data-thumb="" data-logo="2"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -146,9 +175,9 @@
                     <div class="project__inner col">
                         <input type="text" class="project__input project__input--long" name="your_name" pattern="^[А-Яа-яЁёa-zA-ZА-ЯІЇЄҐа-яіїєґ\s]+$" placeholder="Имя" required>
                     </div>
-                    <div class="project__inner col">
+                    <!--<div class="project__inner col">
                         <input type="text" class="project__input project__input--long" name="messenger" placeholder="Мессенджер">
-                    </div>
+                    </div>-->
                     <div class="project__inner flex-row jc-between">
                         <input type="text" class="project__input col-5 col-12-sm" name="phone" pattern="^((8|0|\+\d{1,2})[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" placeholder="Телефон" required>
                         <input type="text" class="project__input col-5 col-12-sm" name="email" pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" placeholder="Email" required>
@@ -350,11 +379,11 @@
             </form>
             <div class="project__or ta-center-sm">Или можете позвонить / написать нам </div>
             <div class="flex-row jc-center">
-                <div class="project__phone flex-row ai-center"> <svg width="19" height="44" fill="#e6e6e6" class="attach-img">
+                <div class="project__phone contact-element flex-row ai-center"> <svg width="19" height="44" fill="#e6e6e6" class="attach-img">
                         <use xlink:href="img/sprite.svg#call"></use>
                     </svg><span>
                         <a href="tel:+38096850605">+380 (96) 857 06 05</a></span></div>
-                <div class="project__email flex-row ai-center"><svg width="19" height="44" fill="#e6e6e6" class="attach-img">
+                <div class="project__email contact-element flex-row ai-center"><svg width="19" height="44" fill="#e6e6e6" class="attach-img">
                         <use xlink:href="img/sprite.svg#email"></use>
                     </svg><span><a href="mailto:studio@madvision.tv">studio@madvision.tv</a></span></div>
             </div>
@@ -394,7 +423,7 @@
                 <h3 class="address__title">
                     Расположение
                 </h3>
-                <div class="address__text">ул. Сичеславская 39<br>
+                <div class="address__text">ул. Сичеславская Набережная, 39<br>
                     г. Днепр
                 </div>
             </div>

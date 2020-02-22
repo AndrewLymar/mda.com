@@ -54,6 +54,12 @@ $(function () {
         closeIconClassName: ".close-menu-icon"
     });
 
+    $("#modal").iziModal({});
+    $(".banner__button").on("click", function (event) {
+        event.preventDefault();
+        $('#modal').iziModal('open');
+    });
+
     $projectForm = document.getElementsByClassName("project__form");
     $buttonNext = $(".project__button-next");
     $buttonPrev = $(".project__button-prev");
@@ -234,6 +240,22 @@ $(function () {
             $languageSwitcher.removeClass("arrow-right");
             $languageSwitcher.addClass("arrow-left");
         }
+    });
+    $(".banner__form").submit(function (e) {
+        e.preventDefault();
+        var $form = $(this);
+        $(".success-banner").fadeIn(0);
+        $.post(
+            $form.attr("action"), $form.serialize()).then(function () {
+            $form.trigger('reset');
+            setTimeout(function () {
+                $(".success-banner").text("Мы получили Ваш запрос и свяжемся с Вами в ближайшее время");
+            }, 1000);
+
+            setTimeout(function () {
+                $(".success-banner").fadeOut();
+            }, 4000);
+        });
     });
     $(".project__form").submit(function (e) {
         e.preventDefault();
