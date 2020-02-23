@@ -249,12 +249,13 @@ $(function () {
             $form.attr("action"), $form.serialize()).then(function () {
             $form.trigger('reset');
             setTimeout(function () {
-                $form.trigger('click');
+                $(".icon-close").trigger('click');
+                $(".success-banner").fadeOut();
                 Swal.fire(
                     'Спасибо!',
                     'Мы получили Ваш запрос и свяжемся с Вами в ближайшее время',
                     'success'
-                )
+                );
             }, 1000);
             /*
             setTimeout(function () {
@@ -291,11 +292,12 @@ $(function () {
             setTimeout(function () {
                 /*
                 $(".success").text("Мы получили Ваш запрос и свяжемся с Вами в ближайшее время");*/
+                $(".success ").fadeOut();
                 Swal.fire(
                     'Спасибо!',
                     'Мы получили Ваш запрос и свяжемся с Вами в ближайшее время',
                     'success'
-                )
+                );
             }, 1000);
             /*
             setTimeout(function () {
