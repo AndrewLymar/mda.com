@@ -771,8 +771,14 @@ section.section__title {
 
 .banner__form {
   margin-top: 30px; }
+  @media only screen and (max-width: 480px) {
+    .banner__form {
+      margin-top: 20px; } }
   .banner__form label {
     font-size: 22px; }
+    @media only screen and (max-width: 480px) {
+      .banner__form label {
+        font-size: 20px; } }
   .banner__form input {
     width: 100%;
     margin-top: 5px;
@@ -781,6 +787,9 @@ section.section__title {
     border-radius: 5px;
     padding: 10px;
     color: #0F1113; }
+    @media only screen and (max-width: 480px) {
+      .banner__form input {
+        margin-bottom: 10px; } }
     .banner__form input::placeholder {
       color: #0F1113; }
     .banner__form input:focus {
@@ -810,7 +819,7 @@ section.section__title {
         font-size: 34px; }
         @media only screen and (max-width: 480px) {
           #modal .iziModal-wrap .iziModal-content h3 {
-            font-size: 30px; } }
+            font-size: 28px; } }
   #modal .modal-button {
     width: 100%;
     margin-top: 20px;

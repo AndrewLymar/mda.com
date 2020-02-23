@@ -359,8 +359,16 @@ section.section {
     &__form {
         margin-top: 30px;
 
+        @media only screen and (max-width: $sm) {
+            margin-top: 20px;
+        }
+
         label {
             font-size: 22px;
+
+            @media only screen and (max-width: $sm) {
+                font-size: 20px;
+            }
         }
 
         input {
@@ -371,6 +379,10 @@ section.section {
             border-radius: 5px;
             padding: 10px;
             color: #0F1113;
+
+            @media only screen and (max-width: $sm) {
+                margin-bottom: 10px;
+            }
 
             &::placeholder {
                 color: #0F1113;
@@ -417,7 +429,7 @@ section.section {
                 font-size: 34px;
 
                 @media only screen and (max-width: $sm) {
-                    font-size: 30px;
+                    font-size: 28px;
                 }
             }
 
