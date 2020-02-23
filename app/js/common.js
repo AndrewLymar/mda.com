@@ -249,12 +249,18 @@ $(function () {
             $form.attr("action"), $form.serialize()).then(function () {
             $form.trigger('reset');
             setTimeout(function () {
-                $(".success-banner").text("Мы получили Ваш запрос и свяжемся с Вами в ближайшее время");
+                $form.trigger('click');
+                Swal.fire(
+                    'Спасибо!',
+                    'Мы получили Ваш запрос и свяжемся с Вами в ближайшее время',
+                    'success'
+                )
             }, 1000);
-
+            /*
             setTimeout(function () {
                 $(".success-banner").fadeOut();
             }, 5000);
+            */
         });
     });
     $(".project__form").submit(function (e) {
@@ -283,12 +289,19 @@ $(function () {
             $buttonMore.css("order", 3);
             $buttonSend.css("order", 1);
             setTimeout(function () {
-                $(".success").text("Мы получили Ваш запрос и свяжемся с Вами в ближайшее время");
+                /*
+                $(".success").text("Мы получили Ваш запрос и свяжемся с Вами в ближайшее время");*/
+                Swal.fire(
+                    'Спасибо!',
+                    'Мы получили Ваш запрос и свяжемся с Вами в ближайшее время',
+                    'success'
+                )
             }, 1000);
-
+            /*
             setTimeout(function () {
                 $(".success ").fadeOut();
             }, 5000);
+            */
         });
     });
 });

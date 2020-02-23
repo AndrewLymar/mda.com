@@ -575,6 +575,11 @@ section.section__title {
   font-size: 24px;
   color: #0F1113; }
 
+.swal2-styled.swal2-confirm {
+  background-color: #ff3 !important;
+  font-weight: 600 !important;
+  color: #595959 !important; }
+
 .thumb-wrap {
   overflow: hidden;
   position: relative;
@@ -751,14 +756,14 @@ section.section__title {
   font-size: 20px; }
 
 .banner__button {
-  min-width: 270px;
+  min-width: 200px;
   margin-top: 25px;
   padding: 10px 20px;
   border: 1px solid transparent;
   border-radius: 10px;
   background: #ff3;
   font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 600;
   color: #0F1113;
   transition: all 0.6s ease;
@@ -789,7 +794,8 @@ section.section__title {
     color: #0F1113; }
     @media only screen and (max-width: 480px) {
       .banner__form input {
-        margin-bottom: 10px; } }
+        margin-bottom: 10px;
+        padding: 5px; } }
     .banner__form input::placeholder {
       color: #0F1113; }
     .banner__form input:focus {
@@ -812,6 +818,9 @@ section.section__title {
     color: #0F1113; }
     #modal .iziModal-wrap .iziModal-content {
       padding: 40px 50px !important; }
+      @media only screen and (max-width: 480px) {
+        #modal .iziModal-wrap .iziModal-content {
+          padding: 30px 40px !important; } }
       #modal .iziModal-wrap .iziModal-content .modal-container {
         margin-top: 10px; }
       #modal .iziModal-wrap .iziModal-content h3 {

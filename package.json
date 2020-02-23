@@ -31,6 +31,7 @@
     "vinyl-ftp": "latest"
   },
   "dependencies": {
-    "query-string": "^6.9.0"
+    "query-string": "^6.9.0",
+    "sweetalert2": "^9.8.2"
   }
 }
