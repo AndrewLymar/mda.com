@@ -292,6 +292,10 @@ section.section {
         overflow: hidden;
         padding-bottom: 50px;
 
+        @media only screen and (max-width: $sm) {
+            padding-bottom: 100px;
+        }
+
         iframe {
             width: 100vw;
             height: 56.25vw;
@@ -304,8 +308,12 @@ section.section {
             left: 50%;
             transform: translate(-50%, -50%);
 
-            @media only screen and (max-width: $md) {
-                //left: 55%;
+            @media only screen and (max-width: $sm) {
+                width: 151vw;
+                height: 131.25vw;
+                min-height: 130vh;
+                min-width: 265.77vh;
+                top: 35%;
             }
         }
 
@@ -385,7 +393,7 @@ section.section {
     z-index: 999999 !important;
 
     @media only screen and (max-width: $sm) {
-        width: 100%;
+        width: 90%;
     }
 
     .iziModal-wrap {
@@ -407,6 +415,10 @@ section.section {
             h3 {
                 text-align: center;
                 font-size: 34px;
+
+                @media only screen and (max-width: $sm) {
+                    font-size: 30px;
+                }
             }
 
             p {

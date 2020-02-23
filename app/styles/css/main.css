@@ -717,6 +717,9 @@ section.section__title {
   height: 100vh;
   overflow: hidden;
   padding-bottom: 50px; }
+  @media only screen and (max-width: 480px) {
+    .banner__video-wrapper {
+      padding-bottom: 100px; } }
   .banner__video-wrapper iframe {
     width: 100vw;
     height: 56.25vw;
@@ -728,6 +731,13 @@ section.section__title {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
+    @media only screen and (max-width: 480px) {
+      .banner__video-wrapper iframe {
+        width: 151vw;
+        height: 131.25vw;
+        min-height: 130vh;
+        min-width: 265.77vh;
+        top: 35%; } }
 
 .banner__contact-wrap {
   margin-top: auto;
@@ -783,7 +793,7 @@ section.section__title {
   z-index: 999999 !important; }
   @media only screen and (max-width: 480px) {
     #modal {
-      width: 100%; } }
+      width: 90%; } }
   #modal .iziModal-wrap {
     display: flex;
     background: #fff;
@@ -798,6 +808,9 @@ section.section__title {
       #modal .iziModal-wrap .iziModal-content h3 {
         text-align: center;
         font-size: 34px; }
+        @media only screen and (max-width: 480px) {
+          #modal .iziModal-wrap .iziModal-content h3 {
+            font-size: 30px; } }
   #modal .modal-button {
     width: 100%;
     margin-top: 20px;
