@@ -57,7 +57,7 @@ $(function () {
     $("#modal").iziModal({});
     $(".banner__button").on("click", function (event) {
         event.preventDefault();
-        $('#modal').iziModal('open');
+        $("#modal").iziModal("open");
     });
 
     $projectForm = document.getElementsByClassName("project__form");
@@ -249,8 +249,8 @@ $(function () {
             $form.attr("action"), $form.serialize()).then(function () {
             $form.trigger('reset');
             setTimeout(function () {
-                $(".icon-close").trigger('click');
                 $(".success-banner").fadeOut();
+                $("#modal").iziModal("close");
                 Swal.fire(
                     'Спасибо!',
                     'Мы получили Ваш запрос и свяжемся с Вами в ближайшее время',
