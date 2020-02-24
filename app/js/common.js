@@ -244,13 +244,13 @@ $(function () {
     $(".banner__form").submit(function (e) {
         e.preventDefault();
         var $form = $(this);
-        //$(".success-banner").fadeIn(0);
+        $(".success-banner").fadeIn(0);
         $.post(
             $form.attr("action"), $form.serialize()).then(function () {
-            $form.trigger('reset');
-            $("#modal").iziModal("close");
             setTimeout(function () {
-                //$(".success-banner").fadeOut(); 
+                $(".success-banner").fadeOut();
+                $form.trigger('reset');
+                $("#modal").iziModal("close");
                 Swal.fire(
                     'Спасибо!',
                     'Мы получили Ваш запрос и свяжемся с Вами в ближайшее время',
@@ -289,10 +289,10 @@ $(function () {
             $buttonSend.show(300);
             $buttonMore.css("order", 3);
             $buttonSend.css("order", 1);
-            $(".success ").fadeOut();
             setTimeout(function () {
                 /*
                 $(".success").text("Мы получили Ваш запрос и свяжемся с Вами в ближайшее время");*/
+                $(".success ").fadeOut();
                 Swal.fire(
                     'Спасибо!',
                     'Мы получили Ваш запрос и свяжемся с Вами в ближайшее время',
