@@ -714,6 +714,20 @@ section.section__title {
 .sticky-menu {
   background: #0F1113; }
 
+.banner__main-text {
+  margin-top: 100px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  color: #fff;
+  z-index: 10; }
+  .banner__main-text span {
+    color: #ff3; }
+  @media only screen and (max-width: 480px) {
+    .banner__main-text {
+      margin-top: 70px;
+      font-size: 18px; } }
+
 .banner__video-wrapper {
   position: relative;
   top: 0;
@@ -756,19 +770,24 @@ section.section__title {
   font-size: 20px; }
 
 .banner__button {
-  min-width: 200px;
+  min-width: 100px;
   margin-top: 25px;
-  padding: 10px 20px;
+  padding: 7px 15px;
   border: 1px solid transparent;
   border-radius: 10px;
   background: #ff3;
   font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 600;
   color: #0F1113;
   transition: all 0.6s ease;
   cursor: pointer;
   z-index: 99999999; }
+  @media only screen and (max-width: 480px) {
+    .banner__button {
+      min-width: 200px;
+      padding: 10px 20px;
+      font-size: 22px; } }
   .banner__button:hover {
     background: none;
     border: 1px solid #fff;
