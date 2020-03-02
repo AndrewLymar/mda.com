@@ -522,8 +522,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #000000 url(http://hello-site.ru//main/images/preloads/grid.svg) center center no-repeat;
-  background-size: 69px; }
+  background: #000 url(http://hello-site.ru//main/images/preloads/puff.svg) center center no-repeat;
+  background-size: 73px; }
 
 body {
   font-family: sans-serif; }
@@ -1194,7 +1194,7 @@ button.icon-close {
   cursor: pointer; }
   .social:last-child {
     margin-right: 0; }
-  .social:hover {
+  .social svg:hover {
     fill: #FFFF33; }
 
 .contacts__title {
@@ -1211,7 +1211,7 @@ button.icon-close {
   text-decoration: none; }
 
 .copy {
-  margin-top: 25px;
+  margin-top: 17px;
   font-size: 12px; }
 
 @media only screen and (max-width: 480px) {

@@ -4372,7 +4372,7 @@ body.swal2-toast-column .swal2-toast .swal2-validation-message {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("http://hello-site.ru//main/images/preloads/grid.svg") center center/69px no-repeat #000;
+  background: url("http://hello-site.ru//main/images/preloads/puff.svg") center center/73px no-repeat #000;
 }
 
 body {
@@ -5353,7 +5353,7 @@ button.icon-close:before {
   margin-right: 0;
 }
 
-.social:hover {
+.social svg:hover {
   fill: #ff3;
 }
 
@@ -5376,7 +5376,7 @@ button.icon-close:before {
 }
 
 .copy {
-  margin-top: 25px;
+  margin-top: 17px;
   font-size: 12px;
 }
 
