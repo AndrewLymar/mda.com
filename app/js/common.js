@@ -45,6 +45,22 @@ window.onload = function () {
 };
 
 $(function () {
+    var successTitle;
+    var successBody;
+    switch ($("html").attr("lang")) {
+        case "ru":
+            successTitle = "Спасибо!";
+            successBody = "Мы получили Ваш запрос и свяжемся с Вами в ближайшее время";
+            break;
+        case "uk":
+            successTitle = "Спасибі!";
+            successBody = "Ми отримали Ваш запит і зв'яжемося з Вами найближчим часом";
+            break;
+        default:
+            successTitle = "Спасибо!";
+            successBody = "Мы получили Ваш запрос и свяжемся с Вами в ближайшее время";
+            break;
+    }
 
     $("nav").mobileMenu({
         menuIconClassName: ".menu-icon",
@@ -257,11 +273,6 @@ $(function () {
                     'success'
                 );
             }, 1000);
-            /*
-            setTimeout(function () {
-                $(".success-banner").fadeOut();
-            }, 5000);
-            */
         });
     });
     $(".project__form").submit(function (e) {
@@ -290,20 +301,13 @@ $(function () {
             $buttonMore.css("order", 3);
             $buttonSend.css("order", 1);
             setTimeout(function () {
-                /*
-                $(".success").text("Мы получили Ваш запрос и свяжемся с Вами в ближайшее время");*/
                 $(".success ").fadeOut();
                 Swal.fire(
-                    'Спасибо!',
-                    'Мы получили Ваш запрос и свяжемся с Вами в ближайшее время',
-                    'success'
+                    successTitle,
+                    successBody,
+                    "success"
                 );
             }, 1000);
-            /*
-            setTimeout(function () {
-                $(".success ").fadeOut();
-            }, 5000);
-            */
         });
     });
 });

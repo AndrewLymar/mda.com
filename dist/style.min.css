@@ -4621,6 +4621,7 @@ section.section__title {
 .language__ch {
   display: none;
   margin-left: 5px;
+  margin-right: 5px;
   color: #fff;
 }
 
